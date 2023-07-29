@@ -6,8 +6,9 @@
     "scripts": {
         "start": "webpack-dev-server --open",
         "prepare": "husky install",
-        "lint-staged": "lint-staged",
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "build": "react-scripts build",
+    "eject": "react-scripts eject"
     },
     "repository": {
         "type": "git",
@@ -44,7 +45,7 @@
         "webpack-dev-server": "^4.15.1"
     },
     "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
+        "*.{js,jsx}": "eslint --fix"
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1",
