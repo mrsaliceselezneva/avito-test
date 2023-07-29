@@ -1,0 +1,93 @@
+@import url("http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic");
+
+@mixin text($w, $s, $l, $c) {
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: $w;
+    font-size: $s;
+    line-height: $l;
+    color: $c;
+}
+
+$footer-height: 80px;
+
+$item_width: 250px;
+$item_margin: 30px;
+
+.footer {
+    height: $footer-height;
+    background-color: rgba(76, 167, 248, 0.3);
+    box-shadow: 0 0 5px 2px #4ca7f8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 30px;
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: calc($item-width * 4 + $item_margin * 3 + $item_width);
+        @media (max-width: 1400px) {
+            width: calc($item_width * 3 + $item_margin * 2 + $item_width);
+        }
+        @media (max-width: 1030px) {
+            width: calc($item_width * 2 + $item_margin * 1 + $item_width);
+        }
+        @media (max-width: 620px) {
+            width: calc($item_width * 1 + $item_margin * 0);
+        }
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 0;
+
+        &__personal_info {
+            display: flex;
+            flex-direction: column;
+
+            &__fio {
+                @include text(500, 15px, 14px, #4ca7f8);
+                margin-bottom: 5px;
+            }
+
+            &__phone {
+                @include text(600, 15px, 14px, #4ca7f8);
+            }
+        }
+
+        &__background_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+
+            height: 50px;
+            width: 50px;
+            border-radius: 12px;
+
+            &__icon {
+                height: 35px;
+                width: 35px;
+                color: #4ca7f8;
+                cursor: pointer;
+            }
+        }
+
+        &__background_icon:hover {
+            background-color: rgb(251, 251, 251);
+
+            &__icon {
+                color: #4ca7f8;
+            }
+        }
+    }
+}

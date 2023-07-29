@@ -22,6 +22,22 @@
         "react/jsx-uses-vars": "error",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "func-style": ["error", "declaration", { "allowArrowFunctions": true }]
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+        "import/no-unresolved": "off",
+        "react/self-closing-comp": ["error", { "component": true, "html": true }],
+        "import/order": [
+            "error",
+            {
+                "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
+                "pathGroups": [
+                    {
+                        "pattern": "@/**/**",
+                        "group": "parent",
+                        "position": "before"
+                    }
+                ],
+                "alphabetize": { "order": "asc" }
+            }
+        ]
     }
 }

@@ -1,0 +1,24 @@
+@import url("http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic");
+
+@mixin text($w, $s, $l, $c) {
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: $w;
+    font-size: $s;
+    line-height: $l;
+    color: $c;
+}
+
+.wrapper {
+    display: flex;
+
+    &__button {
+        background-color: #4ca7f8;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+        height: 32px;
+
+        @include text(400, 18px, 18px, rgb(251, 251, 251));
+    }
+}

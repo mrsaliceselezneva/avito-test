@@ -7,11 +7,22 @@ const plugins = [
     new CleanWebpackPlugin(),
 ];
 
+const npm_package = require("./package.json");
+
 module.exports = {
     mode: "development",
     plugins,
     entry: ["@babel/polyfill", "./src/index.jsx"],
-
+    resolve: {
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".scss", ".d.ts"],
+        alias: {
+            helpers: path.resolve(__dirname, "src/helpers/"),
+            components: path.resolve(__dirname, "src/components/"),
+            pages: path.resolve(__dirname, "src/pages/"),
+            baseUrl: path.resolve(__dirname, "src/"),
+            store: path.resolve(__dirname, "src/store"),
+        },
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[hash].js",
