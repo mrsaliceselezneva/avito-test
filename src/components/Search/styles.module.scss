@@ -1,14 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic");
-
-@mixin text($w, $s, $l, $c) {
-    font-family: "Comfortaa";
-    font-style: normal;
-    font-weight: $w;
-    font-size: $s;
-    line-height: $l;
-    color: $c;
-}
-
+@import "src/styles/utils";
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -17,8 +7,8 @@
     box-sizing: border-box;
 
     &__input {
-        background-color: rgb(251, 251, 251);
-        border: 2px solid #4ca7f8;
+        background-color: $white_color;
+        border: 2px solid $blue_color;
         border-radius: 5px;
         width: 100%;
         padding-left: 5px;

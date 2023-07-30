@@ -1,13 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic");
-
-@mixin text($w, $s, $l, $c) {
-    font-family: "Comfortaa";
-    font-style: normal;
-    font-weight: $w;
-    font-size: $s;
-    line-height: $l;
-    color: $c;
-}
+@import "src/styles/utils";
 
 .wrapper {
     display: flex;

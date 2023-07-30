@@ -6,9 +6,9 @@ const View = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__header}>
-                <FiMenu className={styles.wrapper__header__logo} />
-                <FiUser className={styles.wrapper__header__logo} />
-                <FiLogOut className={styles.wrapper__header__logo} />
+                <FiMenu className={styles.wrapper__header__icon} />
+                <FiUser className={styles.wrapper__header__icon} />
+                <FiLogOut className={styles.wrapper__header__icon} />
             </div>
         </div>
     );
