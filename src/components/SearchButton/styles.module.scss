@@ -7,7 +7,7 @@
         background-color: $blue_color;
         border: none;
         border-radius: 5px;
-        width: 200px;
+        width: $item-width;
         height: 32px;
 
         @include text(400, 18px, 18px, $white_color);

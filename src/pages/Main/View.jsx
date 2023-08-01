@@ -1,3 +1,4 @@
+import List from "components/List";
 import Menu from "components/Menu";
 import Search from "components/Search";
 import SearchButton from "components/SearchButton";
@@ -9,7 +10,7 @@ const View = () => {
         <div className={styles.wrapper}>
             <div className={styles.wrapper__main}>
                 <Search />
-                <div className={styles.wrapper__main__list} />
+                <List />
             </div>
             <div className={styles.wrapper__sidebar}>
                 <SearchButton />
