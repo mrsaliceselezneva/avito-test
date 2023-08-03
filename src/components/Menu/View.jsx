@@ -1,31 +1,15 @@
+import Category from "components/Category";
 import React from "react";
 import styles from "./styles.module.scss";
 
 const View = () => {
+    const listCategory = ["техника", "игрушки", "для животных", "одежда", "посуда"];
+
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.wrapper__menu}>
-                <div>
-                    <input type='checkbox' id='scales' name='scales' />
-                    <label htmlFor='scales'>техника</label>
-                </div>
-                <div>
-                    <input type='checkbox' id='scales' name='scales' />
-                    <label htmlFor='scales'>игрушки</label>
-                </div>
-                <div>
-                    <input type='checkbox' id='scales' name='scales' />
-                    <label htmlFor='scales'>для животных</label>
-                </div>
-                <div>
-                    <input type='checkbox' id='scales' name='scales' />
-                    <label htmlFor='scales'>одежда</label>
-                </div>
-                <div>
-                    <input type='checkbox' id='scales' name='scales' />
-                    <label htmlFor='scales'>посуда</label>
-                </div>
-            </div>
+        <div className={styles.menu}>
+            {listCategory.map((category) => (
+                <Category key={category} category={category} />
+            ))}
         </div>
     );
 };

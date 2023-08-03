@@ -21,6 +21,7 @@
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
         "import/no-unresolved": "off",
