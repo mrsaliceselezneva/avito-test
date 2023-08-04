@@ -1,14 +1,22 @@
-import Category from "components/Category";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 
 const View = () => {
-    const listCategory = ["техника", "игрушки", "для животных", "одежда", "посуда"];
+    const listMenu = ["активные", "закрытые", "архивные"];
+    const [selectMenu, useSelectMenu] = useState("");
 
     return (
         <div className={styles.menu}>
-            {listCategory.map((category) => (
-                <Category key={category} category={category} />
+            {listMenu.map((menu) => (
+                <div
+                    className={
+                        selectMenu === menu ? styles.menu__category_select : styles.menu__category
+                    }
+                    key={menu}
+                    onClick={() => useSelectMenu(menu)}
+                >
+                    {menu}
+                </div>
             ))}
         </div>
     );

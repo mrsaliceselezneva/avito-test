@@ -1,7 +1,7 @@
 import List from "components/List";
-import Menu from "components/Menu";
 import Search from "components/Search";
 import SearchButton from "components/SearchButton";
+import Sidebar from "components/Sidebar";
 import React from "react";
 import styles from "./styles.module.scss";
 
@@ -14,7 +14,7 @@ const View = () => {
             </div>
             <div className={styles.wrapper__sidebar}>
                 <SearchButton />
-                <Menu />
+                <Sidebar />
             </div>
         </div>
     );
