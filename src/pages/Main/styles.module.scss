@@ -1,0 +1,25 @@
+@import "src/styles/utils";
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+    @extend %adaptive_width;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: $item_width;
+        margin-left: 30px;
+        margin-right: 0;
+    }
+}

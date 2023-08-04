@@ -1,0 +1,44 @@
+@import url("http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic");
+
+@mixin text($w, $s, $l, $c) {
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: $w;
+    font-size: $s;
+    line-height: $l;
+    color: $c;
+}
+
+$item_width: 250px;
+$item_margin: 30px;
+
+$white_color: #fbfbfb;
+$grey_color: #f5f5f5;
+$black_color: #292929;
+$blue_color: #4ca7f8;
+$blue_color_hover: #4397f0;
+$blue_color_active: #3d88e6;
+$red_color: #ff6e4a;
+
+$media1: 1400px;
+$media2: 1100px;
+$media3: 800px;
+$media4: 600px;
+
+%adaptive_width {
+    width: calc($item-width * 4 + $item_margin * 4 + $item_width);
+    @media (max-width: $media1) {
+        width: calc($item_width * 3 + $item_margin * 3 + $item_width);
+    }
+    @media (max-width: $media2) {
+        width: calc($item_width * 2 + $item_margin * 2 + $item_width);
+    }
+    @media (max-width: $media3) {
+        width: calc($item_width * 2 + $item_margin * 1);
+    }
+    @media (max-width: $media4) {
+        width: calc($item_width * 1 + $item_margin * 0);
+    }
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,44 @@
+@import "src/styles/utils";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: $item_width;
+    box-sizing: border-box;
+    border: 1px solid $black_color;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+    &__img {
+        margin-bottom: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 1px $black_color;
+    }
+
+    &__description {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        @include text(800, 14px, 18px, $blue_color);
+        min-height: 36px;
+        margin-bottom: 10px;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $red_color;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        color: $white_color;
+        margin-left: 0;
+        margin-right: auto;
+        padding: 3px;
+        border-radius: 5px;
+    }
+}

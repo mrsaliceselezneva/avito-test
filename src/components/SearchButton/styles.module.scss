@@ -1,0 +1,23 @@
+@import "src/styles/utils";
+
+.wrapper {
+    display: flex;
+
+    &__button {
+        background-color: $blue_color;
+        border: none;
+        border-radius: 5px;
+        width: $item-width;
+        height: 32px;
+        cursor: pointer;
+        @include text(400, 18px, 18px, $white_color);
+    }
+
+    &__button:hover {
+        background-color: $blue_color_hover;
+    }
+
+    &__button:active {
+        background-color: $blue_color_active;
+    }
+}

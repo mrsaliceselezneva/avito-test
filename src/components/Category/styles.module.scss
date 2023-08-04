@@ -1,0 +1,26 @@
+@import "src/styles/utils";
+
+.category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    @include text(600, 18px, 18px, $black_color);
+    margin-bottom: 10px;
+
+    &__input {
+        margin-right: 8px;
+    }
+
+    &__input_focus {
+        margin-right: 8px;
+        background-color: $blue_color;
+        border-radius: 2px;
+        color: $white_color;
+    }
+}
+
+.category:hover {
+    color: $blue_color_hover;
+}
+

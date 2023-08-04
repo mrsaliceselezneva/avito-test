@@ -1,0 +1,69 @@
+@import "src/styles/utils";
+
+$footer-height: 80px;
+
+.footer {
+    height: $footer-height;
+    background-color: rgba(76, 167, 248, 0.3);
+    box-shadow: 0 0 5px 2px $blue_color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 30px;
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @extend %adaptive_width;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 0;
+
+        &__personal_info {
+            display: flex;
+            flex-direction: column;
+
+            &__fio {
+                @include text(500, 15px, 14px, $blue_color);
+                margin-bottom: 5px;
+            }
+
+            &__phone {
+                @include text(600, 15px, 14px, $blue_color);
+            }
+        }
+
+        &__background_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+
+            height: 50px;
+            width: 50px;
+            border-radius: 12px;
+
+            &__icon {
+                height: 35px;
+                width: 35px;
+                color: $blue_color;
+                cursor: pointer;
+            }
+        }
+
+        &__background_icon:hover {
+            background-color: $white_color;
+
+            &__icon {
+                color: $blue_color;
+            }
+        }
+    }
+}
