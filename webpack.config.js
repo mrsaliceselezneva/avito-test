@@ -1,10 +1,14 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 const plugins = [
     new HTMLWebpackPlugin({ template: "./public/index.html" }),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+        process: { env: {} },
+    }),
 ];
 
 const npm_package = require("./package.json");
