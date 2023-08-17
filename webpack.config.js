@@ -1,10 +1,14 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 const plugins = [
     new HTMLWebpackPlugin({ template: "./public/index.html" }),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+        process: { env: {} },
+    }),
 ];
 
 const npm_package = require("./package.json");
@@ -18,6 +22,7 @@ module.exports = {
         alias: {
             helpers: path.resolve(__dirname, "src/helpers/"),
             components: path.resolve(__dirname, "src/components/"),
+            api: path.resolve(__dirname, "src/api/"),
             pages: path.resolve(__dirname, "src/pages/"),
             baseUrl: path.resolve(__dirname, "src/"),
             store: path.resolve(__dirname, "src/store"),

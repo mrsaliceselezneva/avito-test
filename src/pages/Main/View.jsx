@@ -1,3 +1,4 @@
+import { useWindowSize } from "api/utils";
 import List from "components/List";
 import Search from "components/Search";
 import SearchButton from "components/SearchButton";
@@ -12,10 +13,12 @@ const View = () => {
                 <Search />
                 <List />
             </div>
-            <div className={styles.wrapper__sidebar}>
-                <SearchButton />
-                <Sidebar />
-            </div>
+            {useWindowSize() > 840 ? (
+                <div className={styles.wrapper__sidebar}>
+                    <SearchButton />
+                    <Sidebar />
+                </div>
+            ) : null}
         </div>
     );
 };
