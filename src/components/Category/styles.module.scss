@@ -15,7 +15,7 @@
     &__input_focus {
         margin-right: 8px;
         background-color: $blue_color;
-        border-radius: 2px;
+        border-radius: 100%;
         color: $white_color;
     }
 }
@@ -23,4 +23,3 @@
 .category:hover {
     color: $blue_color_hover;
 }
-

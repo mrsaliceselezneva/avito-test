@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiSquare, FiCheck } from "react-icons/fi";
+import { FiCircle, FiCheck } from "react-icons/fi";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
@@ -11,7 +11,7 @@ const View = (props) => {
             {select ? (
                 <FiCheck className={styles.category__input_focus} />
             ) : (
-                <FiSquare className={styles.category__input} />
+                <FiCircle className={styles.category__input} />
             )}
             {category}
         </div>

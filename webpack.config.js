@@ -22,6 +22,7 @@ module.exports = {
         alias: {
             helpers: path.resolve(__dirname, "src/helpers/"),
             components: path.resolve(__dirname, "src/components/"),
+            api: path.resolve(__dirname, "src/api/"),
             pages: path.resolve(__dirname, "src/pages/"),
             baseUrl: path.resolve(__dirname, "src/"),
             store: path.resolve(__dirname, "src/store"),
