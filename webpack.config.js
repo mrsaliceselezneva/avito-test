@@ -25,7 +25,7 @@ module.exports = {
             api: path.resolve(__dirname, "src/api/"),
             pages: path.resolve(__dirname, "src/pages/"),
             baseUrl: path.resolve(__dirname, "src/"),
-            store: path.resolve(__dirname, "src/store"),
+            store: path.resolve(__dirname, "src/redux"),
         },
     },
     output: {
