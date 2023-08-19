@@ -1,0 +1,19 @@
+{
+    "categories": [
+        { "title": "все" },
+        { "title": "техника" },
+        { "title": "игрушки" },
+        { "title": "для животных" },
+        { "title": "одежда" },
+        { "title": "посуда" }
+    ],
+
+    "toys": [
+        { "title": "leog", "price": 100 },
+        { "title": "leog", "price": 100 },
+        { "title": "leog", "price": 100 },
+        { "title": "leog", "price": 100 },
+        { "title": "leog", "price": 100 },
+        { "title": "leog", "price": 100 }
+    ]
+}
