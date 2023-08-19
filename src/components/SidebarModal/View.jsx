@@ -11,7 +11,6 @@ const View = (props) => {
     useEffect(() => {
         sendRequest("/categories", "get").then((data) => {
             setListCategory(data.map((category) => category.title));
-            console.log(data.map((category) => category.title));
         });
     }, []);
 
