@@ -2,12 +2,15 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const dotenv = require("dotenv").config({
+    path: path.join(__dirname, ".env"),
+});
 
 const plugins = [
     new HTMLWebpackPlugin({ template: "./public/index.html" }),
     new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
-        process: { env: {} },
+        "process.env": JSON.stringify(process.env),
     }),
 ];
 
@@ -25,7 +28,7 @@ module.exports = {
             api: path.resolve(__dirname, "src/api/"),
             pages: path.resolve(__dirname, "src/pages/"),
             baseUrl: path.resolve(__dirname, "src/"),
-            store: path.resolve(__dirname, "src/store"),
+            store: path.resolve(__dirname, "src/redux"),
         },
     },
     output: {
@@ -34,7 +37,7 @@ module.exports = {
     },
 
     devServer: {
-        port: 3000,
+        port: 3010,
     },
 
     module: {
