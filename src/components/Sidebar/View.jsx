@@ -1,16 +1,22 @@
+import { sendRequest } from "api/utils";
 import Category from "components/Category";
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 
 const View = () => {
-    const listCategory = ["техника", "игрушки", "для животных", "одежда", "посуда"];
-    const { selectFilter } = useSelector((state) => state.sidebarReducer);
+    const [listCategory, setListCategory] = useState([]);
+
+    useEffect(() => {
+        sendRequest("/categories", "get").then((data) => {
+            setListCategory(data.map((category) => category.title));
+            console.log(data.map((category) => category.title));
+        });
+    }, []);
 
     return (
         <div className={styles.sidebar}>
             {listCategory.map((category) => (
-                <Category key={category} category={category} select={category === selectFilter} />
+                <Category key={category} category={category} />
             ))}
         </div>
     );
