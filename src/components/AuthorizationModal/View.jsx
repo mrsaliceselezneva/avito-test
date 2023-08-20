@@ -16,6 +16,8 @@ const View = (props) => {
     const { profile } = useSelector((state) => state.profileReducer);
     const dispatch = useDispatch();
 
+    console.log("user", user);
+    console.log("profile", profile);
     useEffect(() => {
         if (isEmpty(profile) && !isEmpty(user)) {
             axios
@@ -46,6 +48,7 @@ const View = (props) => {
         dispatch(setDeleteProfile());
         setShowAuthorization(false);
         setIsLogout(false);
+        setUser([]);
     };
 
     const logIn = () => {
