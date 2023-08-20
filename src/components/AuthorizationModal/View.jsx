@@ -1,18 +1,23 @@
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
+import { isEmpty } from "api/utils";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FiX } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { setCreateProfile, setDeleteProfile } from "store/slices/profileSlice";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
-    const { show, onClose } = props;
+    const { show, isLogout, onClose, setShowAuthorization, setIsLogout } = props;
 
     const [user, setUser] = useState([]);
-    const [profile, setProfile] = useState([]);
+
+    const { profile } = useSelector((state) => state.profileReducer);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        if (user) {
+        if (isEmpty(profile) && !isEmpty(user)) {
             axios
                 .get(
                     `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
@@ -23,12 +28,13 @@ const View = (props) => {
                         },
                     },
                 )
-                .then((res) => {
-                    setProfile(res.data);
+                .then((result) => {
+                    setCreateProfile(result.data);
+                    dispatch(setCreateProfile(result.data));
                 })
-                .catch((err) => console.log(err));
+                .catch((error) => console.log(error));
         }
-    }, [user]);
+    }, [dispatch, profile, user]);
 
     const login = useGoogleLogin({
         onSuccess: (codeResponse) => setUser(codeResponse),
@@ -37,7 +43,15 @@ const View = (props) => {
 
     const logOut = () => {
         googleLogout();
-        setProfile(null);
+        dispatch(setDeleteProfile());
+        setShowAuthorization(false);
+        setIsLogout(false);
+    };
+
+    const logIn = () => {
+        login();
+        setShowAuthorization(false);
+        setIsLogout(false);
     };
 
     if (show) {
@@ -46,24 +60,57 @@ const View = (props) => {
                 <div className={styles.modal__content} onClick={(event) => event.stopPropagation()}>
                     <div className={styles.modal__content__body}>
                         <FiX className={styles.modal__content__body__exit} onClick={onClose} />
-                        {profile ? (
-                            <div>
-                                <img src={profile.picture} alt='user image' />
-                                <h3>User Logged in</h3>
-                                <p>Name: {profile.name}</p>
-                                <p>Email Address: {profile.email}</p>
-                                <br />
-                                <br />
-                                <button onClick={logOut}>Log out</button>
+                        {isEmpty(profile) ? (
+                            <div onClick={logIn} className={styles.modal__content__body__login}>
+                                <FcGoogle className={styles.modal__content__body__login__icon} />{" "}
+                                Войти при помощи Google
                             </div>
                         ) : (
-                            <div
-                                onClick={() => login()}
-                                className={styles.modal__content__body__login}
-                            >
-                                <FcGoogle className={styles.modal__content__body__login__icon} />{" "}
-                                Sign in with Google
-                            </div>
+                            <>
+                                {isLogout ? (
+                                    <div
+                                        onClick={logOut}
+                                        className={styles.modal__content__body__login}
+                                    >
+                                        <FcGoogle
+                                            className={styles.modal__content__body__login__icon}
+                                        />{" "}
+                                        Выйти
+                                    </div>
+                                ) : (
+                                    <>
+                                        <img
+                                            src={profile.picture}
+                                            alt='user image'
+                                            className={styles.modal__content__body__img}
+                                        />
+                                        <div className={styles.modal__content__body__info}>
+                                            <div
+                                                className={styles.modal__content__body__info__title}
+                                            >
+                                                имя
+                                            </div>
+                                            <div
+                                                className={styles.modal__content__body__info__text}
+                                            >
+                                                {profile.name}
+                                            </div>
+                                        </div>
+                                        <div className={styles.modal__content__body__info}>
+                                            <div
+                                                className={styles.modal__content__body__info__title}
+                                            >
+                                                email
+                                            </div>
+                                            <div
+                                                className={styles.modal__content__body__info__text}
+                                            >
+                                                {profile.email}
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </>
                         )}
                     </div>
                 </div>

@@ -21,4 +21,13 @@ const useWindowSize = () => {
     return size[0];
 };
 
-export { sendRequest, useWindowSize };
+const isEmpty = (obj) => {
+    for (var prop in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, prop)) {
+            return false;
+        }
+    }
+    return true;
+};
+
+export { sendRequest, useWindowSize, isEmpty };

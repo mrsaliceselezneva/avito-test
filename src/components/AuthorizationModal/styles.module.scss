@@ -64,6 +64,44 @@
                     margin-right: 5px;
                 }
             }
+
+            &__img {
+                max-width: 120px;
+                max-height: 120px;
+                width: 20%;
+                margin-bottom: 10px;
+                border-radius: 10px;
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 5px;
+
+                &__title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $blue_color;
+                    @include text(800, 14px, 14px, $white_color);
+                    padding: 3px;
+                    border-bottom-left-radius: 5px;
+                    border-top-left-radius: 5px;
+                    box-sizing: border-box;
+                }
+
+                &__text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include text(800, 14px, 14px, $black_color);
+                    border-bottom: 2px solid $blue_color;
+                    padding: 3px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    box-sizing: border-box;
+                }
+            }
         }
     }
 }
