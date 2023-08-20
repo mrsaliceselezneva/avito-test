@@ -11,10 +11,8 @@ import { persistor, store } from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const google = `${process.env.REACT_APP_GOOGLE_CLIENT_ID}`;
-
 root.render(
-    <GoogleOAuthProvider clientId={google}>
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
         <React.StrictMode>
             <Provider store={store}>
                 <BrowserRouter>
