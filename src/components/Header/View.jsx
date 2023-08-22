@@ -16,10 +16,6 @@ const View = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__header}>
-                <FiMenu
-                    className={styles.wrapper__header__icon}
-                    onClick={() => setShowMenu(true)}
-                />
                 <Menu show={showMenu} onClose={() => setShowMenu(false)} />
                 {isEmpty(profile) ? (
                     <FiLogIn
@@ -28,6 +24,10 @@ const View = () => {
                     />
                 ) : (
                     <>
+                        <FiMenu
+                            className={styles.wrapper__header__icon}
+                            onClick={() => setShowMenu(true)}
+                        />
                         <img
                             src={profile.picture}
                             alt='user image'

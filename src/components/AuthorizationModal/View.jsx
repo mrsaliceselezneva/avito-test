@@ -16,8 +16,6 @@ const View = (props) => {
     const { profile } = useSelector((state) => state.profileReducer);
     const dispatch = useDispatch();
 
-    console.log("user", user);
-    console.log("profile", profile);
     useEffect(() => {
         if (isEmpty(profile) && !isEmpty(user)) {
             axios
