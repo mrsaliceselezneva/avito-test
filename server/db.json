@@ -9,17 +9,101 @@
     ],
 
     "items": [
-        { "id": 1, "title": "lego", "price": 100, "type": "toy" },
-        { "id": 2, "title": "lego", "price": 100, "type": "toy" },
-        { "id": 3, "title": "lego", "price": 100, "type": "toy" },
-        { "id": 4, "title": "lego", "price": 100, "type": "toy" },
-        { "id": 5, "title": "тарелка", "price": 150, "type": "dishes" },
-        { "id": 6, "title": "чашка", "price": 100, "type": "dishes" },
-        { "id": 7, "title": "ложка", "price": 100, "type": "dishes" },
-        { "id": 8, "title": "станиция", "price": 20000, "type": "technic" },
-        { "id": 9, "title": "телевизор", "price": 70000, "type": "technic" },
-        { "id": 10, "title": "кофта", "price": 2000, "type": "clothes" },
-        { "id": 11, "title": "носки", "price": 200, "type": "clothes" },
-        { "id": 12, "title": "носки", "price": 200, "type": "clothes" }
+        {
+            "id": 1,
+            "title": "lego",
+            "price": 100,
+            "type": "toy",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 2,
+            "title": "lego",
+            "price": 100,
+            "type": "toy",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 3,
+            "title": "lego",
+            "price": 100,
+            "type": "toy",
+            "user": "poluvrsov.artyom@yandex.ru",
+            "status": "active"
+        },
+        {
+            "id": 4,
+            "title": "lego",
+            "price": 100,
+            "type": "toy",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 5,
+            "title": "тарелка",
+            "price": 150,
+            "type": "dishes",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 6,
+            "title": "чашка",
+            "price": 100,
+            "type": "dishes",
+            "user": "poluvrsov.artyom@yandex.ru",
+            "status": "active"
+        },
+        {
+            "id": 7,
+            "title": "ложка",
+            "price": 100,
+            "type": "dishes",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 8,
+            "title": "станиция",
+            "price": 20000,
+            "type": "technic",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 9,
+            "title": "телевизор",
+            "price": 70000,
+            "type": "technic",
+            "user": "poluvrsov.artyom@gyandex.ru",
+            "status": "active"
+        },
+        {
+            "id": 10,
+            "title": "кофта",
+            "price": 2000,
+            "type": "clothes",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 11,
+            "title": "носки",
+            "price": 200,
+            "type": "clothes",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        },
+        {
+            "id": 12,
+            "title": "носки",
+            "price": 200,
+            "type": "clothes",
+            "user": "poluvrsov.artyom@gmail.com",
+            "status": "active"
+        }
     ]
 }

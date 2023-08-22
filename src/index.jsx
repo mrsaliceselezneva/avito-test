@@ -1,3 +1,4 @@
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
@@ -9,12 +10,17 @@ import App from "./App";
 import { persistor, store } from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-    <Provider store={store}>
-        <BrowserRouter>
-            <PersistGate persistor={persistor}>
-                <App />
-            </PersistGate>
-        </BrowserRouter>
-    </Provider>,
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+        <React.StrictMode>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <PersistGate persistor={persistor}>
+                        <App />
+                    </PersistGate>
+                </BrowserRouter>
+            </Provider>
+        </React.StrictMode>
+    </GoogleOAuthProvider>,
 );

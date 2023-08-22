@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
+import profileReducer from "./slices/profileSlice";
 import sidebarReducer from "./slices/sidebarSlice";
 
 const persistConfig = {
@@ -19,10 +20,12 @@ const persistConfig = {
 };
 
 const sidebarPersistedReducer = persistReducer(persistConfig, sidebarReducer);
+const profilePersistedReducer = persistReducer(persistConfig, profileReducer);
 
 export const store = configureStore({
     reducer: {
         sidebarReducer: sidebarPersistedReducer,
+        profileReducer: profilePersistedReducer,
     },
 
     middleware: (getDefaultMiddleware) =>

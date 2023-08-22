@@ -48,10 +48,12 @@
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1",
+        "@react-oauth/google": "^0.11.1",
         "@reduxjs/toolkit": "^1.9.5",
         "axios": "^1.4.0",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1",
+        "gapi-script": "^1.2.0",
         "module-alias": "^2.2.3",
         "node": "^20.5.0",
         "prettier": "^3.0.0",

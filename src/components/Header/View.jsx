@@ -1,17 +1,58 @@
+import { isEmpty } from "api/utils";
+import AuthorizationModal from "components/AuthorizationModal";
 import Menu from "components/Menu";
 import React, { useState } from "react";
-import { FiUser, FiLogOut, FiMenu } from "react-icons/fi";
+import { FiLogIn, FiLogOut, FiMenu } from "react-icons/fi";
+import { useSelector } from "react-redux";
 import styles from "./styles.module.scss";
 
 const View = () => {
-    const [show, useShow] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
+    const [isLogout, setIsLogout] = useState(false);
+    const [showAuthorization, setShowAuthorization] = useState(false);
+
+    const { profile } = useSelector((state) => state.profileReducer);
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__header}>
-                <FiMenu className={styles.wrapper__header__icon} onClick={() => useShow(true)} />
-                <Menu show={show} onClose={() => useShow(false)} />
-                <FiUser className={styles.wrapper__header__icon} />
-                <FiLogOut className={styles.wrapper__header__icon} />
+                <Menu show={showMenu} onClose={() => setShowMenu(false)} />
+                {isEmpty(profile) ? (
+                    <FiLogIn
+                        className={styles.wrapper__header__icon}
+                        onClick={() => setShowAuthorization(true)}
+                    />
+                ) : (
+                    <>
+                        <FiMenu
+                            className={styles.wrapper__header__icon}
+                            onClick={() => setShowMenu(true)}
+                        />
+                        <img
+                            src={profile.picture}
+                            alt='user image'
+                            className={styles.wrapper__header__icon}
+                            onClick={() => setShowAuthorization(true)}
+                        />
+                        <FiLogOut
+                            className={styles.wrapper__header__icon}
+                            onClick={() => {
+                                setIsLogout(true);
+                                setShowAuthorization(true);
+                            }}
+                        />
+                    </>
+                )}
+                <AuthorizationModal
+                    show={showAuthorization}
+                    isLogout={isLogout}
+                    onClose={() => {
+                        setIsLogout(false);
+                        setShowAuthorization(false);
+                    }}
+                    setShowAuthorization={setShowAuthorization}
+                    setIsLogout={setIsLogout}
+                />
             </div>
         </div>
     );
