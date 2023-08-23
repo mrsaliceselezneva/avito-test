@@ -6,6 +6,7 @@ import styles from "./styles.module.scss";
 const View = (props) => {
     const { status } = props;
     const { selectStatus } = useSelector((state) => state.menuReducer);
+    const { profile } = useSelector((state) => state.profileReducer);
     const dispatch = useDispatch();
 
     const className = selectStatus === status.title ? styles.status_select : styles.status;
@@ -17,7 +18,7 @@ const View = (props) => {
                     dispatch(setClearStatus());
                 } else {
                     dispatch(setSelectStatus(status.title));
-                    dispatch(setLinkStatus(`status=${status.type}`));
+                    dispatch(setLinkStatus(`user=${profile.email}&status=${status.type}`));
                 }
             }}
         >

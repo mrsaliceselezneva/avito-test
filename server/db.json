@@ -19,7 +19,7 @@
             "title": "lego",
             "price": 100,
             "type": "toy",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -27,7 +27,7 @@
             "title": "lego",
             "price": 100,
             "type": "toy",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -35,7 +35,7 @@
             "title": "lego",
             "price": 100,
             "type": "toy",
-            "user": "poluvrsov.artyom@yandex.ru",
+            "user": "poluvesov.artyom@yandex.ru",
             "status": "close"
         },
         {
@@ -43,7 +43,7 @@
             "title": "lego",
             "price": 100,
             "type": "toy",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -51,7 +51,7 @@
             "title": "тарелка",
             "price": 150,
             "type": "dishes",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -59,7 +59,7 @@
             "title": "чашка",
             "price": 100,
             "type": "dishes",
-            "user": "poluvrsov.artyom@yandex.ru",
+            "user": "poluvesov.artyom@yandex.ru",
             "status": "active"
         },
         {
@@ -67,7 +67,7 @@
             "title": "ложка",
             "price": 100,
             "type": "dishes",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -75,7 +75,7 @@
             "title": "станиция",
             "price": 20000,
             "type": "technic",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -83,7 +83,7 @@
             "title": "телевизор",
             "price": 70000,
             "type": "technic",
-            "user": "poluvrsov.artyom@gyandex.ru",
+            "user": "poluvesov.artyom@gyandex.ru",
             "status": "active"
         },
         {
@@ -91,7 +91,7 @@
             "title": "кофта",
             "price": 2000,
             "type": "clothes",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -99,7 +99,7 @@
             "title": "носки",
             "price": 200,
             "type": "clothes",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         },
         {
@@ -107,7 +107,7 @@
             "title": "носки",
             "price": 200,
             "type": "clothes",
-            "user": "poluvrsov.artyom@gmail.com",
+            "user": "poluvesov.artyom@gmail.com",
             "status": "active"
         }
     ]
