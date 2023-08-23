@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import Status from "components/Status";
+import React from "react";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
     const { show, onClose } = props;
     const listMenu = ["активные", "закрытые", "архивные"];
-    const [selectMenu, useSelectMenu] = useState("");
 
     if (show) {
         return (
@@ -14,18 +14,8 @@ const View = (props) => {
                         className={styles.modal__content__menu}
                         onClick={(event) => event.stopPropagation()}
                     >
-                        {listMenu.map((menu) => (
-                            <div
-                                className={
-                                    selectMenu === menu
-                                        ? styles.modal__content__menu__category_select
-                                        : styles.modal__content__menu__category
-                                }
-                                key={menu}
-                                onClick={() => useSelectMenu(menu)}
-                            >
-                                {menu}
-                            </div>
+                        {listMenu.map((status) => (
+                            <Status key={status} status={status} />
                         ))}
                     </div>
                 </div>
