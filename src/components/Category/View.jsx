@@ -1,12 +1,12 @@
 import React from "react";
 import { FiCircle, FiCheck } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
-import { setSelectFilter, setLinkFilter, setClear } from "store/slices/sidebarSlice";
+import { setSelectCategory, setLinkCategory, setClear } from "store/slices/sidebarSlice";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
     const { category } = props;
-    const { selectFilter } = useSelector((state) => state.sidebarReducer);
+    const { selectCategory } = useSelector((state) => state.sidebarReducer);
     const dispatch = useDispatch();
 
     if (category.type === "all") {
@@ -15,10 +15,10 @@ const View = (props) => {
                 className={styles.category}
                 onClick={() => {
                     dispatch(setClear());
-                    dispatch(setSelectFilter(category.title));
+                    dispatch(setSelectCategory(category.title));
                 }}
             >
-                {category.title === selectFilter ? (
+                {category.title === selectCategory ? (
                     <FiCheck className={styles.category__input_focus} />
                 ) : (
                     <FiCircle className={styles.category__input} />
@@ -31,11 +31,11 @@ const View = (props) => {
             <div
                 className={styles.category}
                 onClick={() => {
-                    dispatch(setSelectFilter(category.title));
-                    dispatch(setLinkFilter(`type=${category.type}`));
+                    dispatch(setSelectCategory(category.title));
+                    dispatch(setLinkCategory(`type=${category.type}`));
                 }}
             >
-                {category.title === selectFilter ? (
+                {category.title === selectCategory ? (
                     <FiCheck className={styles.category__input_focus} />
                 ) : (
                     <FiCircle className={styles.category__input} />

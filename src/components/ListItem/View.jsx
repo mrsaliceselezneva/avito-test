@@ -7,13 +7,21 @@ import styles from "./styles.module.scss";
 const View = () => {
     const [listItem, setListItem] = useState([]);
 
-    const { linkFilter } = useSelector((state) => state.sidebarReducer);
+    const { linkCategory } = useSelector((state) => state.sidebarReducer);
+    const { linkStatus } = useSelector((state) => state.menuReducer);
 
     useEffect(() => {
-        sendRequest(`/items?${linkFilter}`, "get").then((data) => {
-            setListItem(data);
-        });
-    }, [linkFilter]);
+        console.log(linkCategory, linkStatus);
+        if (linkCategory) {
+            sendRequest(`/items?${linkCategory}&${linkStatus}`, "get").then((data) => {
+                setListItem(data);
+            });
+        } else {
+            sendRequest(`/items?${linkStatus}`, "get").then((data) => {
+                setListItem(data);
+            });
+        }
+    }, [linkCategory, linkStatus]);
 
     return (
         <div className={styles.wrapper}>

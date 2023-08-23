@@ -1,4 +1,10 @@
 {
+    "status": [
+        { "title": "активные", "type": "active" },
+        { "title": "закрытые", "type": "close" },
+        { "title": "архивные", "type": "archive" }
+    ],
+
     "categories": [
         { "id": 1, "title": "все", "type": "all" },
         { "id": 2, "title": "техника", "type": "technic" },
@@ -31,7 +37,7 @@
             "price": 100,
             "type": "toy",
             "user": "poluvrsov.artyom@yandex.ru",
-            "status": "active"
+            "status": "close"
         },
         {
             "id": 4,

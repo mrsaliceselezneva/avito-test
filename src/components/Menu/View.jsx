@@ -1,10 +1,17 @@
+import { sendRequest } from "api/utils";
 import Status from "components/Status";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
     const { show, onClose } = props;
-    const listMenu = ["активные", "закрытые", "архивные"];
+    const [listMenu, setListMenu] = useState([]);
+
+    useEffect(() => {
+        sendRequest("/status", "get").then((data) => {
+            setListMenu(data);
+        });
+    }, []);
 
     if (show) {
         return (
@@ -15,7 +22,7 @@ const View = (props) => {
                         onClick={(event) => event.stopPropagation()}
                     >
                         {listMenu.map((status) => (
-                            <Status key={status} status={status} />
+                            <Status key={status.title} status={status} />
                         ))}
                     </div>
                 </div>

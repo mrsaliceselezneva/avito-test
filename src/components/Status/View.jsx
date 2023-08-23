@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setSelectStatus } from "store/slices/menuSlice";
+import { setSelectStatus, setLinkStatus } from "store/slices/menuSlice";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
@@ -8,11 +8,16 @@ const View = (props) => {
     const { selectStatus } = useSelector((state) => state.menuReducer);
     const dispatch = useDispatch();
 
-    const className = selectStatus === status ? styles.status_select : styles.status;
-
+    const className = selectStatus === status.title ? styles.status_select : styles.status;
     return (
-        <div className={className} key={status} onClick={() => dispatch(setSelectStatus(status))}>
-            {status}
+        <div
+            className={className}
+            onClick={() => {
+                dispatch(setSelectStatus(status.title));
+                dispatch(setLinkStatus(`status=${status.type}`));
+            }}
+        >
+            {status.title}
         </div>
     );
 };
