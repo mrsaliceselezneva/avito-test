@@ -13,9 +13,9 @@ const View = (props) => {
         return (
             <div
                 className={styles.category}
-                key={category.title}
                 onClick={() => {
                     dispatch(setClear());
+                    dispatch(setSelectFilter(category.title));
                 }}
             >
                 {category.title === selectFilter ? (
@@ -30,7 +30,6 @@ const View = (props) => {
         return (
             <div
                 className={styles.category}
-                key={category.title}
                 onClick={() => {
                     dispatch(setSelectFilter(category.title));
                     dispatch(setLinkFilter(`type=${category.type}`));
