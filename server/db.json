@@ -1,11 +1,11 @@
 {
     "categories": [
-        { "id": 1, "title": "все" },
-        { "id": 2, "title": "техника" },
-        { "id": 3, "title": "игрушки" },
-        { "id": 4, "title": "для животных" },
-        { "id": 5, "title": "одежда" },
-        { "id": 6, "title": "посуда" }
+        { "id": 1, "title": "все", "type": "all" },
+        { "id": 2, "title": "техника", "type": "technic" },
+        { "id": 3, "title": "игрушки", "type": "toy" },
+        { "id": 4, "title": "для животных", "type": "animal" },
+        { "id": 5, "title": "одежда", "type": "clothes" },
+        { "id": 6, "title": "посуда", "type": "dishes" }
     ],
 
     "items": [

@@ -8,14 +8,14 @@ const View = () => {
 
     useEffect(() => {
         sendRequest("/categories", "get").then((data) => {
-            setListCategory(data.map((category) => category.title));
+            setListCategory(data);
         });
     }, []);
 
     return (
         <div className={styles.sidebar}>
             {listCategory.map((category) => (
-                <Category key={category} category={category} />
+                <Category key={category.title} category={category} />
             ))}
         </div>
     );
