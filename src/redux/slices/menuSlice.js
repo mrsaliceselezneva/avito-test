@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     selectStatus: null,
-    linkStatus: '',
+    linkStatus: "",
 };
 
 const menuSlice = createSlice({
-    name: 'menuSlice',
+    name: "menuSlice",
     initialState,
     reducers: {
         setSelectStatus(state, action) {
@@ -15,13 +15,13 @@ const menuSlice = createSlice({
         setLinkStatus(state, action) {
             state.linkStatus = action.payload;
         },
-        setClear(state) {
+        setClearStatus(state) {
             state.selectStatus = null;
             state.linkStatus = null;
         },
     },
 });
 
-export const { setSelectStatus, setLinkStatus, setClear } = menuSlice.actions;
+export const { setSelectStatus, setLinkStatus, setClearStatus } = menuSlice.actions;
 
 export default menuSlice.reducer;

@@ -15,13 +15,13 @@ const sidebarSlice = createSlice({
         setLinkCategory(state, action) {
             state.linkCategory = action.payload;
         },
-        setClear(state) {
+        setClearCategory(state) {
             state.selectCategory = null;
             state.linkCategory = null;
         },
     },
 });
 
-export const { setSelectCategory, setLinkCategory, setClear } = sidebarSlice.actions;
+export const { setSelectCategory, setLinkCategory, setClearCategory } = sidebarSlice.actions;
 
 export default sidebarSlice.reducer;
