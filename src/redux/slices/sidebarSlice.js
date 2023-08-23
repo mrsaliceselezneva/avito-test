@@ -17,7 +17,7 @@ const sidebarSlice = createSlice({
         },
         setClearCategory(state) {
             state.selectCategory = null;
-            state.linkCategory = null;
+            state.linkCategory = "";
         },
     },
 });

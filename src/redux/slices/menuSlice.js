@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     selectStatus: null,
-    linkStatus: "",
+    linkStatus: "status=active",
 };
 
 const menuSlice = createSlice({
@@ -17,7 +17,7 @@ const menuSlice = createSlice({
         },
         setClearStatus(state) {
             state.selectStatus = null;
-            state.linkStatus = null;
+            state.linkStatus = "status=active";
         },
     },
 });

@@ -11,16 +11,9 @@ const View = () => {
     const { linkStatus } = useSelector((state) => state.menuReducer);
 
     useEffect(() => {
-        console.log(linkCategory, linkStatus);
-        if (linkCategory) {
-            sendRequest(`/items?${linkCategory}&${linkStatus}`, "get").then((data) => {
-                setListItem(data);
-            });
-        } else {
-            sendRequest(`/items?${linkStatus}`, "get").then((data) => {
-                setListItem(data);
-            });
-        }
+        sendRequest(`/items?${linkStatus}&${linkCategory}`, "get").then((data) => {
+            setListItem(data);
+        });
     }, [linkCategory, linkStatus]);
 
     return (
