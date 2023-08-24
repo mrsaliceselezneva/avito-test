@@ -17,7 +17,7 @@ const View = (props) => {
                     dispatch(setClearCategory());
                 } else {
                     dispatch(setSelectCategory(category.title));
-                    dispatch(setLinkCategory(`type=${category.type}`));
+                    dispatch(setLinkCategory(`&type=${category.type}`));
                 }
             }}
         >
