@@ -18,7 +18,7 @@ const View = (props) => {
                     dispatch(setClearStatus());
                 } else {
                     dispatch(setSelectStatus(status.title));
-                    dispatch(setLinkStatus(`user=${profile.email}&status=${status.type}`));
+                    dispatch(setLinkStatus(`email=${profile.email}&status=${status.type}`));
                 }
             }}
         >
