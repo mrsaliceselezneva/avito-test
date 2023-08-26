@@ -9,12 +9,13 @@ const View = () => {
 
     const { linkCategory } = useSelector((state) => state.sidebarReducer);
     const { linkStatus } = useSelector((state) => state.menuReducer);
+    const { linkSearch } = useSelector((state) => state.searchReducer);
 
     useEffect(() => {
-        sendRequest(`/items?${linkStatus}${linkCategory}`, "get").then((data) => {
+        sendRequest(`/items?${linkStatus}${linkSearch}${linkCategory}`, "get").then((data) => {
             setListItem(data);
         });
-    }, [linkCategory, linkStatus]);
+    }, [linkCategory, linkStatus, linkSearch]);
 
     return (
         <div className={styles.wrapper}>

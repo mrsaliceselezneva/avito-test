@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    serachRequest: "",
+    searchRequest: "",
+    linkSearch: "",
 };
 
 const searchSlice = createSlice({
@@ -9,14 +10,17 @@ const searchSlice = createSlice({
     initialState,
     reducers: {
         setSearch(state, action) {
-            state.selectCategory = action.payload;
+            state.searchRequest = action.payload;
+        },
+        setRequest(state, action) {
+            state.linkSearch = `&q=${action.payload}`;
         },
         setClearSearch(state) {
-            state.serachRequest = "";
+            state.searchRequest = "";
         },
     },
 });
 
-export const { setSearch, setClearSearch } = searchSlice.actions;
+export const { setSearch, setRequest, setClearSearch } = searchSlice.actions;
 
 export default searchSlice.reducer;
