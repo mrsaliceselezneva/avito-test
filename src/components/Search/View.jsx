@@ -1,7 +1,7 @@
 import { useWindowSize } from "api/utils";
 import SidebarModal from "components/SidebarModal";
 import React, { useState, useRef, useEffect } from "react";
-import { FiFilter, FiSearch } from "react-icons/fi";
+import { FiFilter, FiSearch, FiX } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { setClearSearch, setRequest, setSearch } from "store/slices/searchSlice";
 import styles from "./styles.module.scss";
@@ -14,16 +14,28 @@ const View = () => {
 
     const ref = useRef("");
 
+    useEffect(() => {
+        ref.current.value = searchRequest;
+    }, [searchRequest]);
+
     return (
         <div className={styles.wrapper}>
             {useWindowSize() > 840 ? (
-                <input
-                    ref={ref}
-                    className={styles.wrapper__input}
-                    type='search'
-                    placeholder='Поиск...'
-                    onChange={(event) => dispatch(setSearch(event.target.value))}
-                />
+                <>
+                    <input
+                        ref={ref}
+                        className={styles.wrapper__input}
+                        type='search'
+                        placeholder='Поиск...'
+                        onChange={(event) => dispatch(setSearch(event.target.value))}
+                    />
+                    <div className={styles.wrapper__clear}>
+                        <FiX
+                            className={styles.wrapper__clear__icon}
+                            onClick={() => dispatch(setClearSearch())}
+                        />
+                    </div>
+                </>
             ) : (
                 <>
                     <input
@@ -33,6 +45,12 @@ const View = () => {
                         placeholder='Поиск...'
                         onChange={(event) => dispatch(setSearch(event.target.value))}
                     />
+                    <div className={styles.wrapper__adaptive__clear}>
+                        <FiX
+                            className={styles.wrapper__adaptive__clear__icon}
+                            onClick={() => dispatch(setClearSearch())}
+                        />
+                    </div>
                     <FiFilter
                         className={styles.wrapper__adaptive__filter}
                         onClick={() => useShow(true)}
