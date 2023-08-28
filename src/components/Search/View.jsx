@@ -19,7 +19,12 @@ const View = () => {
     }, [searchRequest]);
 
     return (
-        <div className={styles.wrapper}>
+        <div
+            className={styles.wrapper}
+            onKeyDown={(event) => {
+                if (event.key === "Enter") dispatch(setRequest(searchRequest));
+            }}
+        >
             {useWindowSize() > 840 ? (
                 <>
                     <input
