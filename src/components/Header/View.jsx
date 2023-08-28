@@ -2,7 +2,7 @@ import { isEmpty } from "api/utils";
 import AuthorizationModal from "components/AuthorizationModal";
 import Menu from "components/Menu";
 import React, { useState } from "react";
-import { FiLogIn, FiLogOut, FiMenu } from "react-icons/fi";
+import { FiLogIn, FiLogOut, FiMenu, FiPlus } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import styles from "./styles.module.scss";
 
@@ -28,6 +28,7 @@ const View = () => {
                             className={styles.wrapper__header__icon}
                             onClick={() => setShowMenu(true)}
                         />
+                        <FiPlus className={styles.wrapper__header__icon} />
                         <img
                             src={profile.picture}
                             alt='user image'
