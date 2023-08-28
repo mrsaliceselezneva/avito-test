@@ -1,27 +1,27 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    selectFilter: null,
-    linkFilter: '',
+    selectCategory: null,
+    linkCategory: "",
 };
 
 const sidebarSlice = createSlice({
-    name: 'sidebarSlice',
+    name: "sidebarSlice",
     initialState,
     reducers: {
-        setSelectFilter(state, action) {
-            state.selectFilter = action.payload;
+        setSelectCategory(state, action) {
+            state.selectCategory = action.payload;
         },
-        setLinkFilter(state, action) {
-            state.linkFilter = action.payload;
+        setLinkCategory(state, action) {
+            state.linkCategory = action.payload;
         },
-        setClear(state) {
-            state.selectFilter = null;
-            state.linkFilter = null;
+        setClearCategory(state) {
+            state.selectCategory = null;
+            state.linkCategory = "";
         },
     },
 });
 
-export const { setSelectFilter, setLinkFilter, setClear } = sidebarSlice.actions;
+export const { setSelectCategory, setLinkCategory, setClearCategory } = sidebarSlice.actions;
 
 export default sidebarSlice.reducer;

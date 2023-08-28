@@ -8,6 +8,7 @@
     margin-bottom: 30px;
 
     &__list {
+        min-height: calc(100vh - (80px + 50px + 30px + 30px + 32px + 30px + 30px));
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);

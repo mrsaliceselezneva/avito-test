@@ -5,7 +5,9 @@ import React, { useState, useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FiX } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
+import { setClearStatus } from "store/slices/menuSlice";
 import { setCreateProfile, setDeleteProfile } from "store/slices/profileSlice";
+import { setClearCategory } from "store/slices/sidebarSlice";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
@@ -44,6 +46,8 @@ const View = (props) => {
     const logOut = () => {
         googleLogout();
         dispatch(setDeleteProfile());
+        dispatch(setClearCategory());
+        dispatch(setClearStatus());
         setShowAuthorization(false);
         setIsLogout(false);
         setUser([]);

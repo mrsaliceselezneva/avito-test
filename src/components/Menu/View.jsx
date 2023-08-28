@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import { sendRequest } from "api/utils";
+import Status from "components/Status";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
     const { show, onClose } = props;
-    const listMenu = ["активные", "закрытые", "архивные"];
-    const [selectMenu, useSelectMenu] = useState("");
+    const [listMenu, setListMenu] = useState([]);
+
+    useEffect(() => {
+        sendRequest("/status", "get").then((data) => {
+            setListMenu(data);
+        });
+    }, []);
 
     if (show) {
         return (
@@ -14,18 +21,8 @@ const View = (props) => {
                         className={styles.modal__content__menu}
                         onClick={(event) => event.stopPropagation()}
                     >
-                        {listMenu.map((menu) => (
-                            <div
-                                className={
-                                    selectMenu === menu
-                                        ? styles.modal__content__menu__category_select
-                                        : styles.modal__content__menu__category
-                                }
-                                key={menu}
-                                onClick={() => useSelectMenu(menu)}
-                            >
-                                {menu}
-                            </div>
+                        {listMenu.map((status) => (
+                            <Status key={status.title} status={status} />
                         ))}
                     </div>
                 </div>
