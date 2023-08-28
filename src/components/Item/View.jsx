@@ -8,7 +8,7 @@ const View = (props) => {
 
     return (
         <div className={styles.wrapper} onClick={() => setShowItem(true)}>
-            <img className={styles.wrapper__img} src='img/lego.png' alt={item.title} />
+            <img className={styles.wrapper__img} src={`img/${item.type}.jpeg`} alt={item.title} />
             <div className={styles.wrapper__title}>{item.title}</div>
             <div className={styles.wrapper__price}>{item.price} ₽</div>
             <ItemModal show={showItem} onClose={() => setShowItem(false)} item={item} />

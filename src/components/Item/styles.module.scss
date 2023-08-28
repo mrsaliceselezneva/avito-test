@@ -14,6 +14,9 @@
         margin-bottom: 10px;
         border-radius: 10px;
         box-shadow: 0 0 5px 1px $black_color;
+        object-fit: cover;
+        width: 228px;
+        height: 170px;
     }
 
     &__title {
