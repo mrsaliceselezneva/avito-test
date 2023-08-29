@@ -27,11 +27,13 @@ $size: 32px;
         border-top-left-radius: 5px;
         width: 100%;
         padding-left: 5px;
+        @include text(800, 14px, 14px, $black_color);
     }
 
     &__input:focus {
         outline: none !important;
     }
+
     &__clear {
         display: flex;
         background-color: $white_color;
@@ -67,6 +69,7 @@ $size: 32px;
             border-right: none;
             width: 100%;
             padding-left: 5px;
+            @include text(800, 14px, 14px, $black_color);
         }
 
         &__input:focus {

@@ -14,7 +14,6 @@ const View = () => {
     const [showAuthorization, setShowAuthorization] = useState(false);
 
     const { profile } = useSelector((state) => state.profileReducer);
-    console.log(profile.picture);
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__header}>
