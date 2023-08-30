@@ -1,12 +1,15 @@
 import { sendRequest } from "api/utils";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsChange } from "store/slices/changeSlice";
 import View from "./View.jsx";
 
 const Controller = (props) => {
-    const { show, onClose, listCategory } = props;
+    const { show, onClose, listCategory, setShowAddItem } = props;
 
     const { profile } = useSelector((state) => state.profileReducer);
+    const { isChange } = useSelector((state) => state.changeReducer);
+    const dispatch = useDispatch();
 
     const errorMessager = "Обязательное поле";
     const errorColor = "#ff6e4a";
@@ -27,6 +30,8 @@ const Controller = (props) => {
                     description: data.description,
                 };
                 sendRequest("/items", "post", sendData);
+                dispatch(setIsChange(!isChange));
+                setShowAddItem(false);
             });
         });
     };

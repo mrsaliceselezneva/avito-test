@@ -33,7 +33,11 @@ const View = () => {
                             className={styles.wrapper__header__icon}
                             onClick={() => setShowAddItem(true)}
                         />
-                        <AddItemModal show={showAddItem} onClose={() => setShowAddItem(false)} />
+                        <AddItemModal
+                            show={showAddItem}
+                            onClose={() => setShowAddItem(false)}
+                            setShowAddItem={setShowAddItem}
+                        />
                         <img
                             src={profile.picture}
                             alt='user image'

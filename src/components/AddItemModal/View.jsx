@@ -89,12 +89,10 @@ const View = (props) => {
                                     описание
                                 </label>
                                 <input
-                                    {...register("description", { required: true })}
-                                    style={errors.description && errorBorderColor}
+                                    {...register("description")}
                                     className={styles.modal__content__body__form__block__input}
                                 />
                             </div>
-                            {errors.description && errorSpan}
 
                             <input
                                 type='submit'

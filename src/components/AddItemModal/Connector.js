@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Controller from "./Controller.js";
 
 const Connector = (props) => {
-    const { show, onClose } = props;
+    const { show, onClose, setShowAddItem } = props;
 
     const [listCategory, setListCategory] = useState([]);
 
@@ -12,7 +12,14 @@ const Connector = (props) => {
             setListCategory(data);
         });
     }, []);
-    return <Controller show={show} onClose={onClose} listCategory={listCategory} />;
+    return (
+        <Controller
+            show={show}
+            onClose={onClose}
+            listCategory={listCategory}
+            setShowAddItem={setShowAddItem}
+        />
+    );
 };
 
 export default Connector;
