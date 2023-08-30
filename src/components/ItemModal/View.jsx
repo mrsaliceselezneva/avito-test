@@ -13,7 +13,7 @@ const View = (props) => {
                         <FiX className={styles.modal__content__body__exit} onClick={onClose} />
 
                         <img
-                            src={`img/${item.type}.jpeg`}
+                            src={`img/${item.category}.jpeg`}
                             alt={item.title}
                             className={styles.modal__content__body__img}
                         />

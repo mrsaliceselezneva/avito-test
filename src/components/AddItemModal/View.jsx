@@ -4,15 +4,21 @@ import { FiX } from "react-icons/fi";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
-    const { show, onClose, listCategory, errorMessager, errorBackground, errorBorderColor } = props;
+    const {
+        show,
+        onClose,
+        listCategory,
+        errorMessager,
+        errorBackground,
+        errorBorderColor,
+        onSubmit,
+    } = props;
 
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-
-    const onSubmit = (data) => console.log(data);
 
     const errorSpan = (
         <span className={styles.modal__content__body__form__error}>{errorMessager}</span>
@@ -50,8 +56,8 @@ const View = (props) => {
                                     название
                                 </label>
                                 <input
-                                    {...register("name", { required: true })}
-                                    style={errors.name && errorBorderColor}
+                                    {...register("title", { required: true })}
+                                    style={errors.title && errorBorderColor}
                                     className={styles.modal__content__body__form__block__input}
                                 />
                             </div>
@@ -68,6 +74,9 @@ const View = (props) => {
                                     {...register("price", { required: true })}
                                     style={errors.price && errorBorderColor}
                                     className={styles.modal__content__body__form__block__input}
+                                    type='number'
+                                    min='0'
+                                    step='1'
                                 />
                             </div>
                             {errors.price && errorSpan}

@@ -10,11 +10,17 @@ const Controller = (props) => {
             dispatch(setClearCategory());
         } else {
             dispatch(setSelectCategory(category.title));
-            dispatch(setLinkCategory(`&type=${category.type}`));
+            dispatch(setLinkCategory(`&category=${category.type}`));
         }
     };
 
-    return <View category={category} changeCategory={changeCategory} isSelectCategory={isSelectCategory}/>;
+    return (
+        <View
+            category={category}
+            changeCategory={changeCategory}
+            isSelectCategory={isSelectCategory}
+        />
+    );
 };
 
 export default Controller;
