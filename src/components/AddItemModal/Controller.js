@@ -5,16 +5,11 @@ import { setIsChange } from "store/slices/changeSlice";
 import View from "./View.jsx";
 
 const Controller = (props) => {
-    const { show, onClose, listCategory, setShowAddItem } = props;
+    const { show, onClose, listCategory, setShowAddItem, errorMessager,errorBackground, errorBorderColor } = props;
 
     const { profile } = useSelector((state) => state.profileReducer);
     const { isChange } = useSelector((state) => state.changeReducer);
     const dispatch = useDispatch();
-
-    const errorMessager = "Обязательное поле";
-    const errorColor = "#ff6e4a";
-    const errorBackground = { background: errorColor };
-    const errorBorderColor = { borderColor: "#ff6e4a" };
 
     const onSubmit = (data) => {
         sendRequest("/items", "get").then((lastIdData) => {
