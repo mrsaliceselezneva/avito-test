@@ -3,14 +3,24 @@ import { FiX } from "react-icons/fi";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
-    const { show, onClose, item } = props;
+    const { show, onClose, item, isOwner } = props;
 
     if (show) {
         return (
             <div className={styles.modal} onClick={onClose}>
                 <div className={styles.modal__content} onClick={(event) => event.stopPropagation()}>
                     <div className={styles.modal__content__body}>
-                        <FiX className={styles.modal__content__body__exit} onClick={onClose} />
+                        <div className={styles.modal__content__body__top}>
+                            {isOwner && (
+                                <div className={styles.modal__content__body__top__close}>
+                                    заркыть сделку
+                                </div>
+                            )}
+                            <FiX
+                                className={styles.modal__content__body__top__exit}
+                                onClick={onClose}
+                            />
+                        </div>
 
                         <img
                             src={`img/${item.category}.jpeg`}

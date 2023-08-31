@@ -29,39 +29,50 @@
             padding-top: 10px;
             border-radius: 5px;
 
-            &__exit {
-                margin-left: auto;
-                background-color: $red_color;
-                border-radius: 100%;
-                padding: 2px;
-                height: 22px;
-                width: 22px;
-                color: $white_color;
-                box-sizing: border-box;
-                cursor: pointer;
-            }
-
-            &__exit:hover {
-                background-color: $blue_color;
-            }
-
-            &__login {
+            &__top {
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                @include text(800, 14px, 14px, $black_color);
-                border: 1px solid;
-                background-color: $white_color;
-                border-radius: 3px;
-                margin-right: auto;
-                margin-left: auto;
-                padding: 3px;
-                cursor: pointer;
+                flex-direction: row;
+                margin-bottom: 10px;
 
-                &__icon {
-                    height: 20px;
-                    width: 20px;
+                &__exit {
+                    background-color: $red_color;
+                    border-radius: 100%;
+                    padding: 2px;
+                    height: 22px;
+                    width: 22px;
+                    color: $white_color;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                }
+
+                &__exit:hover {
+                    background-color: $blue_color_hover;
+                }
+
+                &__exit:active {
+                    background-color: $blue_color_active;
+                }
+
+                &__close {
+                    margin-left: auto;
                     margin-right: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $red_color;
+                    @include text(800, 14px, 16px, $white_color);
+                    padding: 3px;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                }
+
+                &__close:hover {
+                    background-color: $blue_color_hover;
+                }
+
+                &__close:active {
+                    background-color: $blue_color_active;
                 }
             }
 
@@ -96,7 +107,7 @@
                     align-items: center;
                     justify-content: center;
                     background-color: $blue_color;
-                    @include text(800, 14px, 14px, $white_color);
+                    @include text(800, 14px, 16px, $white_color);
                     padding: 3px;
                     border-bottom-left-radius: 5px;
                     border-top-left-radius: 5px;
@@ -139,7 +150,7 @@
                     align-items: center;
                     justify-content: center;
                     background-color: $red_color;
-                    @include text(800, 14px, 14px, $white_color);
+                    @include text(800, 14px, 16px, $white_color);
                     padding: 3px;
                     border-bottom-left-radius: 5px;
                     border-top-left-radius: 5px;

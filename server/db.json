@@ -175,15 +175,6 @@
       "description": "не открывал"
     },
     {
-      "id": 14,
-      "title": "1",
-      "price": "1",
-      "category": "technic",
-      "user": "Артём Полувесов",
-      "email": "poluvesov.artyom@gmail.com",
-      "status": "active"
-    },
-    {
       "id": 15,
       "title": "2",
       "price": "2",
@@ -218,26 +209,6 @@
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
       "status": "active"
-    },
-    {
-      "id": 19,
-      "title": "3",
-      "price": "3",
-      "category": "technic",
-      "user": "Артём Полувесов",
-      "email": "poluvesov.artyom@gmail.com",
-      "status": "active",
-      "description": "3444"
-    },
-    {
-      "id": 20,
-      "title": "1234",
-      "price": "123",
-      "category": "technic",
-      "user": "Артём Полувесов",
-      "email": "poluvesov.artyom@gmail.com",
-      "status": "active",
-      "description": "23"
     }
   ]
 }
