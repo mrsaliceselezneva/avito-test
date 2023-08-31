@@ -4,7 +4,7 @@ import { FiX } from "react-icons/fi";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
-    const { show, isLogout, onClose, profile, logIn, logOut, isEmpty } = props;
+    const { show, isLogout, onClose, profile, logIn, logOut, isEmptyProfile } = props;
 
     if (show) {
         return (
@@ -12,7 +12,7 @@ const View = (props) => {
                 <div className={styles.modal__content} onClick={(event) => event.stopPropagation()}>
                     <div className={styles.modal__content__body}>
                         <FiX className={styles.modal__content__body__exit} onClick={onClose} />
-                        {isEmpty(profile) ? (
+                        {isEmptyProfile ? (
                             <div onClick={logIn} className={styles.modal__content__body__login}>
                                 <FcGoogle className={styles.modal__content__body__login__icon} />
                                 Войти при помощи Google

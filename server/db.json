@@ -81,7 +81,7 @@
       "category": "toy",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
-      "status": "active",
+      "status": "close",
       "description": "очень хороший товар"
     },
     {
@@ -175,40 +175,23 @@
       "description": "не открывал"
     },
     {
-      "id": 15,
-      "title": "2",
-      "price": "2",
-      "category": "technic",
-      "user": "Артём Полувесов",
-      "email": "poluvesov.artyom@gmail.com",
-      "status": "active"
-    },
-    {
       "id": 16,
       "title": "3",
       "price": "3",
       "category": "technic",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
-      "status": "active"
+      "status": "close"
     },
     {
       "id": 17,
-      "title": "4",
-      "price": "4",
+      "title": "1",
+      "price": "1",
       "category": "technic",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
-      "status": "active"
-    },
-    {
-      "id": 18,
-      "title": "4",
-      "price": "4",
-      "category": "technic",
-      "user": "Артём Полувесов",
-      "email": "poluvesov.artyom@gmail.com",
-      "status": "active"
+      "status": "close",
+      "description": "1"
     }
   ]
 }

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Controller from "./Controller.js";
 
 const Connector = (props) => {
-    const { show, onClose, setShowAddItem } = props;
+    const { show, onClose } = props;
 
     const [listCategory, setListCategory] = useState([]);
 
@@ -22,7 +22,6 @@ const Connector = (props) => {
             show={show}
             onClose={onClose}
             listCategory={listCategory}
-            setShowAddItem={setShowAddItem}
             errorMessager={errorMessager}
             errorBackground={errorBackground}
             errorBorderColor={errorBorderColor}

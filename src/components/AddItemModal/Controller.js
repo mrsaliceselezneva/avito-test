@@ -5,7 +5,7 @@ import { setIsChange } from "store/slices/changeSlice";
 import View from "./View.jsx";
 
 const Controller = (props) => {
-    const { show, onClose, listCategory, setShowAddItem, errorMessager,errorBackground, errorBorderColor } = props;
+    const { show, onClose, listCategory, errorMessager, errorBackground, errorBorderColor } = props;
 
     const { profile } = useSelector((state) => state.profileReducer);
     const { isChange } = useSelector((state) => state.changeReducer);
@@ -26,7 +26,7 @@ const Controller = (props) => {
                 };
                 sendRequest("/items", "post", sendData);
                 dispatch(setIsChange(!isChange));
-                setShowAddItem(false);
+                onClose();
             });
         });
     };

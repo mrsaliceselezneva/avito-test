@@ -6,18 +6,7 @@ import { setClearCategory } from "store/slices/sidebarSlice";
 import View from "./View.jsx";
 
 const Controller = (props) => {
-    const {
-        show,
-        isLogout,
-        onClose,
-        setShowAuthorization,
-        setIsLogout,
-        dispatch,
-        profile,
-        isEmpty,
-        setUser,
-        user,
-    } = props;
+    const { show, isLogout, onClose, setIsLogout, dispatch, profile, isEmpty, setUser } = props;
 
     const login = useGoogleLogin({
         onSuccess: (codeResponse) => setUser(codeResponse),
@@ -29,14 +18,14 @@ const Controller = (props) => {
         dispatch(setDeleteProfile());
         dispatch(setClearCategory());
         dispatch(setClearStatus());
-        setShowAuthorization(false);
+        onClose();
         setIsLogout(false);
         setUser([]);
     };
 
     const logIn = () => {
         login();
-        setShowAuthorization(false);
+        onClose();
         setIsLogout(false);
     };
 
@@ -45,14 +34,10 @@ const Controller = (props) => {
             show={show}
             isLogout={isLogout}
             onClose={onClose}
-            setShowAuthorization={setShowAuthorization}
-            setIsLogout={setIsLogout}
-            dispatch={dispatch}
             profile={profile}
-            user={user}
             logIn={logIn}
             logOut={logOut}
-            isEmpty={isEmpty}
+            isEmptyProfile={isEmpty(profile)}
         />
     );
 };

@@ -46,7 +46,11 @@ input[type="search"]::-webkit-search-cancel-button {
             }
 
             &__exit:hover {
-                background-color: $blue_color;
+                background-color: $blue_color_hover;
+            }
+
+            &__exit:active {
+                background-color: $blue_color_active;
             }
 
             &__form {
