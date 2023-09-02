@@ -1,5 +1,20 @@
 @import "src/styles/utils";
 
+%price {
+    display: flex;
+    background-color: $red_color;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: $white_color;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -31,17 +46,21 @@
     }
 
     &__price {
+        @extend %price;
+    }
+
+    &__close {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $red_color;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 16px;
-        color: $white_color;
-        margin-left: 0;
-        margin-right: auto;
-        padding: 3px;
-        border-radius: 5px;
+        flex-direction: row;
+
+        &__price {
+            @extend %price;
+        }
+
+        &__date {
+            @extend %price;
+            margin-left: auto;
+            margin-right: 0;
+        }
     }
 }

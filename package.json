@@ -48,6 +48,7 @@
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1",
+        "@pbe/react-yandex-maps": "^1.2.4",
         "@react-oauth/google": "^0.11.1",
         "@reduxjs/toolkit": "^1.9.5",
         "axios": "^1.4.0",

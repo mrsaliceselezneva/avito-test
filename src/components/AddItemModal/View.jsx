@@ -8,7 +8,7 @@ const View = (props) => {
         show,
         onClose,
         listCategory,
-        errorMessager,
+        errorMessage,
         errorBackground,
         errorBorderColor,
         onSubmit,
@@ -21,7 +21,7 @@ const View = (props) => {
     } = useForm();
 
     const errorSpan = (
-        <span className={styles.modal__content__body__form__error}>{errorMessager}</span>
+        <span className={styles.modal__content__body__form__error}>{errorMessage}</span>
     );
 
     if (show) {

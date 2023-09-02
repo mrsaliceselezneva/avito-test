@@ -39,6 +39,8 @@ const Controller = (props) => {
         sendRequest(`/items/${item.id}`, "delete").then(() => dispatch(setIsChange(!isChange)));
     };
 
+    const isStatusActive = item.status == "active";
+
     return (
         <View
             show={show}
@@ -55,6 +57,7 @@ const Controller = (props) => {
             closeItem={closeItem}
             deleteItem={deleteItem}
             onDelete={onDelete}
+            isStatusActive={isStatusActive}
         />
     );
 };

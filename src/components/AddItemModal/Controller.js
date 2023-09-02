@@ -5,7 +5,7 @@ import { setIsChange } from "store/slices/changeSlice";
 import View from "./View.jsx";
 
 const Controller = (props) => {
-    const { show, onClose, listCategory, errorMessager, errorBackground, errorBorderColor } = props;
+    const { show, onClose, listCategory, errorMessage, errorBackground, errorBorderColor } = props;
 
     const { profile } = useSelector((state) => state.profileReducer);
     const { isChange } = useSelector((state) => state.changeReducer);
@@ -36,7 +36,7 @@ const Controller = (props) => {
             show={show}
             onClose={onClose}
             listCategory={listCategory}
-            errorMessager={errorMessager}
+            errorMessage={errorMessage}
             errorBackground={errorBackground}
             errorBorderColor={errorBorderColor}
             onSubmit={onSubmit}

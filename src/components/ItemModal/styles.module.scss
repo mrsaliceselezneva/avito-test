@@ -35,6 +35,9 @@
                 justify-content: center;
                 flex-direction: row;
                 margin-bottom: 10px;
+                @media (max-width: $media4) {
+                    flex-direction: column;
+                }
 
                 &__exit {
                     background-color: $red_color;
@@ -45,6 +48,10 @@
                     color: $white_color;
                     box-sizing: border-box;
                     cursor: pointer;
+                    @media (max-width: $media4) {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
                 }
 
                 &__exit:hover {
@@ -69,6 +76,11 @@
                     border-radius: 5px;
                     box-sizing: border-box;
                     cursor: pointer;
+                    @media (max-width: $media4) {
+                        margin-left: auto;
+                        margin-right: 0;
+                        margin-top: 5px;
+                    }
 
                     &__icon {
                         margin-right: 5px;
@@ -96,6 +108,11 @@
                     border-radius: 5px;
                     box-sizing: border-box;
                     cursor: pointer;
+                    @media (max-width: $media4) {
+                        margin-left: auto;
+                        margin-right: 0;
+                        margin-top: 5px;
+                    }
 
                     &__icon {
                         margin-left: 5px;
@@ -264,6 +281,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                @include text(800, 16px, 16px, $black_color);
 
                 &__button {
                     display: flex;
