@@ -23,7 +23,13 @@ const View = (props) => {
         ? styles.modal__content__body__top__close
         : styles.modal__content__body__top__delete;
 
-    const isClose = item.status == "close" ? item.date : null;
+    const isClose =
+        item.status == "close" ? (
+            <div className={styles.modal__content__body__price}>
+                <div className={styles.modal__content__body__price__title}>дата</div>
+                <div className={styles.modal__content__body__price__text}>{item.date}</div>
+            </div>
+        ) : null;
 
     const closeOrBack = () => {
         if (!closeItem && !deleteItem)
@@ -106,20 +112,7 @@ const View = (props) => {
                                             </div>
                                         </div>
 
-                                        <div className={styles.modal__content__body__price}>
-                                            <div
-                                                className={
-                                                    styles.modal__content__body__price__title
-                                                }
-                                            >
-                                                дата
-                                            </div>
-                                            <div
-                                                className={styles.modal__content__body__price__text}
-                                            >
-                                                {item.date}
-                                            </div>
-                                        </div>
+                                        {isClose}
 
                                         <div className={styles.modal__content__body__price}>
                                             <div
