@@ -10,12 +10,13 @@ const View = () => {
     const { linkCategory } = useSelector((state) => state.sidebarReducer);
     const { linkStatus } = useSelector((state) => state.menuReducer);
     const { linkSearch } = useSelector((state) => state.searchReducer);
+    const { isChange } = useSelector((state) => state.changeReducer);
 
     useEffect(() => {
         sendRequest(`/items?${linkStatus}${linkSearch}${linkCategory}`, "get").then((data) => {
             setListItem(data);
         });
-    }, [linkCategory, linkStatus, linkSearch]);
+    }, [linkCategory, linkStatus, linkSearch, isChange]);
 
     return (
         <div className={styles.wrapper}>

@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
+import changeReducer from "./slices/changeSlice";
 import menuReducer from "./slices/menuSlice";
 import profileReducer from "./slices/profileSlice";
 import searchReducer from "./slices/searchSlice";
@@ -22,12 +23,14 @@ const persistConfig = {
 };
 
 const menuPersistedReducer = persistReducer(persistConfig, menuReducer);
+const changePersistedReducer = persistReducer(persistConfig, changeReducer);
 const profilePersistedReducer = persistReducer(persistConfig, profileReducer);
 const searchPersistedReducer = persistReducer(persistConfig, searchReducer);
 const sidebarPersistedReducer = persistReducer(persistConfig, sidebarReducer);
 
 export const store = configureStore({
     reducer: {
+        changeReducer: changePersistedReducer,
         menuReducer: menuPersistedReducer,
         profileReducer: profilePersistedReducer,
         searchReducer: searchPersistedReducer,

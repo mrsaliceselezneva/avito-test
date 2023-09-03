@@ -1,63 +1,10 @@
-import { googleLogout, useGoogleLogin } from "@react-oauth/google";
-import { isEmpty } from "api/utils";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FiX } from "react-icons/fi";
-import { useDispatch, useSelector } from "react-redux";
-import { setClearStatus } from "store/slices/menuSlice";
-import { setCreateProfile, setDeleteProfile } from "store/slices/profileSlice";
-import { setClearCategory } from "store/slices/sidebarSlice";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
-    const { show, isLogout, onClose, setShowAuthorization, setIsLogout } = props;
-
-    const [user, setUser] = useState([]);
-
-    const { profile } = useSelector((state) => state.profileReducer);
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        if (isEmpty(profile) && !isEmpty(user)) {
-            axios
-                .get(
-                    `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
-                    {
-                        headers: {
-                            Authorization: `Bearer ${user.access_token}`,
-                            Accept: "application/json",
-                        },
-                    },
-                )
-                .then((result) => {
-                    setCreateProfile(result.data);
-                    dispatch(setCreateProfile(result.data));
-                })
-                .catch((error) => console.log(error));
-        }
-    }, [dispatch, profile, user]);
-
-    const login = useGoogleLogin({
-        onSuccess: (codeResponse) => setUser(codeResponse),
-        onError: (error) => console.log("Login Failed:", error),
-    });
-
-    const logOut = () => {
-        googleLogout();
-        dispatch(setDeleteProfile());
-        dispatch(setClearCategory());
-        dispatch(setClearStatus());
-        setShowAuthorization(false);
-        setIsLogout(false);
-        setUser([]);
-    };
-
-    const logIn = () => {
-        login();
-        setShowAuthorization(false);
-        setIsLogout(false);
-    };
+    const { show, isLogout, onClose, profile, logIn, logOut, isEmptyProfile } = props;
 
     if (show) {
         return (
@@ -65,9 +12,9 @@ const View = (props) => {
                 <div className={styles.modal__content} onClick={(event) => event.stopPropagation()}>
                     <div className={styles.modal__content__body}>
                         <FiX className={styles.modal__content__body__exit} onClick={onClose} />
-                        {isEmpty(profile) ? (
+                        {isEmptyProfile ? (
                             <div onClick={logIn} className={styles.modal__content__body__login}>
-                                <FcGoogle className={styles.modal__content__body__login__icon} />{" "}
+                                <FcGoogle className={styles.modal__content__body__login__icon} />
                                 Войти при помощи Google
                             </div>
                         ) : (
