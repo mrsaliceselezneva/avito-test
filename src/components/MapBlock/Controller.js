@@ -17,7 +17,11 @@ const Controller = (props) => {
             controls: ["zoomControl", "fullscreenControl"],
         };
 
-        var myMap = new ymaps.Map(ref.current, defaultState);
+        const defaultOptions = {
+            autoFitToViewport: "ifNull",
+        };
+
+        const myMap = new ymaps.Map(ref.current, defaultState, defaultOptions);
 
         // myMap.contaner.fitToViewport();
 
