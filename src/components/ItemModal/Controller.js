@@ -14,25 +14,16 @@ const Controller = (props) => {
     const [deleteItem, setDeleteItem] = useState(false);
 
     const toClose = () => {
-        // item.status = "close";
         setCloseItem(true);
-        // sendRequest(`/items/${item.id}`, "put", item).then(() => dispatch(setIsChange(!isChange)));
-        // onClose();
     };
 
     const toDelete = () => {
-        // item.status = "close";
         setDeleteItem(true);
-        // sendRequest(`/items/${item.id}`, "put", item).then(() => dispatch(setIsChange(!isChange)));
-        // onClose();
     };
 
     const toOpen = () => {
-        // item.status = "close";
         setCloseItem(false);
         setDeleteItem(false);
-        // sendRequest(`/items/${item.id}`, "put", item).then(() => dispatch(setIsChange(!isChange)));
-        // onClose();
     };
 
     const onDelete = () => {

@@ -1,22 +1,9 @@
-import { sendRequest } from "api/utils";
 import Item from "components/Item";
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import styles from "./styles.module.scss";
 
-const View = () => {
-    const [listItem, setListItem] = useState([]);
-
-    const { linkCategory } = useSelector((state) => state.sidebarReducer);
-    const { linkStatus } = useSelector((state) => state.menuReducer);
-    const { linkSearch } = useSelector((state) => state.searchReducer);
-    const { isChange } = useSelector((state) => state.changeReducer);
-
-    useEffect(() => {
-        sendRequest(`/items?${linkStatus}${linkSearch}${linkCategory}`, "get").then((data) => {
-            setListItem(data);
-        });
-    }, [linkCategory, linkStatus, linkSearch, isChange]);
+const View = (props) => {
+    const { listItem } = props;
 
     return (
         <div className={styles.wrapper}>
