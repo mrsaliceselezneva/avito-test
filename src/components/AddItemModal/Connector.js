@@ -10,7 +10,7 @@ const Connector = (props) => {
     const errorMessage = "Обязательное поле";
     const errorColor = "#ff6e4a";
     const errorBackground = { background: errorColor };
-    const errorBorderColor = { borderColor: "#ff6e4a" };
+    const errorBorderColor = { borderColor: errorColor };
 
     useEffect(() => {
         sendRequest("/categories", "get").then((data) => {
