@@ -9,8 +9,10 @@ const View = (props) => {
         onClose,
         listCategory,
         errorMessage,
+        errorMessageDate,
         errorBackground,
         errorBorderColor,
+        validateDate,
         onSubmit,
     } = props;
 
@@ -22,6 +24,10 @@ const View = (props) => {
 
     const errorSpan = (
         <span className={styles.modal__content__body__form__error}>{errorMessage}</span>
+    );
+
+    const errorSpanDate = (
+        <span className={styles.modal__content__body__form__error}>{errorMessageDate}</span>
     );
 
     if (show) {
@@ -50,7 +56,7 @@ const View = (props) => {
 
                             <div className={styles.modal__content__body__form__block}>
                                 <label
-                                    style={errors.name && errorBackground}
+                                    style={errors.title && errorBackground}
                                     className={styles.modal__content__body__form__block__label}
                                 >
                                     название
@@ -61,7 +67,7 @@ const View = (props) => {
                                     className={styles.modal__content__body__form__block__input}
                                 />
                             </div>
-                            {errors.name && errorSpan}
+                            {errors.title && errorSpan}
 
                             <div className={styles.modal__content__body__form__block}>
                                 <label
@@ -93,6 +99,27 @@ const View = (props) => {
                                     className={styles.modal__content__body__form__block__input}
                                 />
                             </div>
+
+                            <div className={styles.modal__content__body__form__block}>
+                                <label
+                                    style={errors.date && errorBackground}
+                                    className={styles.modal__content__body__form__block__label}
+                                >
+                                    дата закрытия
+                                </label>
+                                <input
+                                    {...register("date", {
+                                        required: true,
+                                        validate: (value) => {
+                                            return validateDate(value);
+                                        },
+                                    })}
+                                    style={errors.date && errorBorderColor}
+                                    className={styles.modal__content__body__form__block__input}
+                                    type='date'
+                                />
+                            </div>
+                            {errors.date && errorSpanDate}
 
                             <input
                                 type='submit'

@@ -1,196 +1,215 @@
 {
-    "status": [
-        {
-            "title": "активные",
-            "type": "active",
-            "description": "очень хороший товар"
-        },
-        {
-            "title": "закрытые",
-            "type": "close",
-            "description": "очень хороший товар"
-        },
-        {
-            "title": "архивные",
-            "type": "archive",
-            "description": "очень хороший товар"
-        }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "title": "техника",
-            "type": "technic"
-        },
-        {
-            "id": 2,
-            "title": "игрушки",
-            "type": "toy"
-        },
-        {
-            "id": 3,
-            "title": "для животных",
-            "type": "animal"
-        },
-        {
-            "id": 4,
-            "title": "одежда",
-            "type": "clothes"
-        },
-        {
-            "id": 5,
-            "title": "посуда",
-            "type": "dishes"
-        }
-    ],
-    "items": [
-        {
-            "id": 1,
-            "title": "lego",
-            "price": 100,
-            "category": "toy",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "active",
-            "description": "очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар"
-        },
-        {
-            "id": 2,
-            "title": "lego",
-            "price": 100,
-            "category": "toy",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "close",
-            "description": "очень хороший товар",
-            "date": "2.8.2023 +4UTC"
-        },
-        {
-            "id": 3,
-            "title": "lego",
-            "price": 1000,
-            "category": "toy",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@yandex.ru",
-            "status": "close",
-            "description": "очень хороший товар",
-            "date": "2.8.2023 +4UTC"
-        },
-        {
-            "id": 4,
-            "title": "lego",
-            "price": 100,
-            "category": "toy",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "close",
-            "description": "очень хороший товар",
-            "date": "2.8.2023 +4UTC"
-        },
-        {
-            "id": 5,
-            "title": "тарелка",
-            "price": 150,
-            "category": "dishes",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "active",
-            "description": "очень хороший товар"
-        },
-        {
-            "id": 6,
-            "title": "чашка",
-            "price": 100,
-            "category": "dishes",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@yandex.ru",
-            "status": "active",
-            "description": "очень хороший товар"
-        },
-        {
-            "id": 7,
-            "title": "ложка",
-            "price": 100,
-            "category": "dishes",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "active",
-            "description": "очень хороший товар"
-        },
-        {
-            "id": 8,
-            "title": "станиция",
-            "price": 20000,
-            "category": "technic",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "close",
-            "description": "очень хороший товар",
-            "date": "2.8.2023 +4UTC"
-        },
-        {
-            "id": 9,
-            "title": "телевизор",
-            "price": 70000,
-            "category": "technic",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@yandex.ru",
-            "status": "active",
-            "description": "очень хороший товар"
-        },
-        {
-            "id": 10,
-            "title": "кофта",
-            "price": 2000,
-            "category": "clothes",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "active",
-            "description": "очень хороший товар"
-        },
-        {
-            "id": 11,
-            "title": "носки",
-            "price": 200,
-            "category": "clothes",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "archive",
-            "description": "очень хороший товар"
-        },
-        {
-            "price": "123456",
-            "street": "Дворцовая улица",
-            "house": " 7",
-            "id": 12,
-            "title": "носки",
-            "category": "clothes",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "close",
-            "description": "очень хороший товар",
-            "date": "2.8.2023 +4UTC"
-        },
-        {
-            "id": 13,
-            "title": "телевизор",
-            "price": "79000",
-            "category": "technic",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "active",
-            "description": "не открывал"
-        },
-        {
-            "id": 17,
-            "title": "1",
-            "price": "1",
-            "category": "technic",
-            "user": "Артём Полувесов",
-            "email": "poluvesov.artyom@gmail.com",
-            "status": "close",
-            "description": "1",
-            "date": "2.8.2023 +4UTC"
-        }
-    ]
+  "status": [
+    {
+      "title": "активные",
+      "type": "active",
+      "description": "очень хороший товар"
+    },
+    {
+      "title": "закрытые",
+      "type": "close",
+      "description": "очень хороший товар"
+    },
+    {
+      "title": "архивные",
+      "type": "archive",
+      "description": "очень хороший товар"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "техника",
+      "type": "technic"
+    },
+    {
+      "id": 2,
+      "title": "игрушки",
+      "type": "toy"
+    },
+    {
+      "id": 3,
+      "title": "для животных",
+      "type": "animal"
+    },
+    {
+      "id": 4,
+      "title": "одежда",
+      "type": "clothes"
+    },
+    {
+      "id": 5,
+      "title": "посуда",
+      "type": "dishes"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "lego",
+      "price": 100,
+      "category": "toy",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "archive",
+      "description": "очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар очень хороший товар очень хороший товар очень хороший товар. очень хороший товар",
+      "date": "2.8.2023"
+    },
+    {
+      "id": 2,
+      "title": "lego",
+      "price": 100,
+      "category": "toy",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "archive",
+      "description": "очень хороший товар",
+      "date": "2.8.2023"
+    },
+    {
+      "id": 3,
+      "title": "lego",
+      "price": 1000,
+      "category": "toy",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "close",
+      "description": "очень хороший товар",
+      "date": "2.8.2023"
+    },
+    {
+      "id": 4,
+      "title": "lego",
+      "price": 100,
+      "category": "toy",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "archive",
+      "description": "очень хороший товар",
+      "date": "2.8.2023"
+    },
+    {
+      "id": 5,
+      "title": "тарелка",
+      "price": 150,
+      "category": "dishes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "active",
+      "description": "очень хороший товар",
+      "date": "6.9.2023"
+    },
+    {
+      "id": 6,
+      "title": "чашка",
+      "price": 100,
+      "category": "dishes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "очень хороший товар",
+      "date": "1.9.2023"
+    },
+    {
+      "id": 7,
+      "title": "ложка",
+      "price": 100,
+      "category": "dishes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "active",
+      "description": "очень хороший товар",
+      "date": "16.9.2023"
+    },
+    {
+      "id": 8,
+      "title": "станиция",
+      "price": 20000,
+      "category": "technic",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "archive",
+      "description": "очень хороший товар",
+      "date": "2.8.2023"
+    },
+    {
+      "id": 9,
+      "title": "телевизор",
+      "price": 70000,
+      "category": "technic",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "archive",
+      "description": "очень хороший товар",
+      "date": "6.9.2022"
+    },
+    {
+      "id": 10,
+      "title": "кофта",
+      "price": 2000,
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "active",
+      "description": "очень хороший товар",
+      "date": "6.8.2023"
+    },
+    {
+      "id": 11,
+      "title": "носки",
+      "price": 200,
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "archive",
+      "description": "очень хороший товар",
+      "date": "1.9.2023"
+    },
+    {
+      "price": "123456",
+      "street": "Дворцовая улица",
+      "house": " 7",
+      "id": 12,
+      "title": "носки",
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "archive",
+      "description": "очень хороший товар",
+      "date": "2.8.2023"
+    },
+    {
+      "id": 13,
+      "title": "телевизор",
+      "price": "79000",
+      "category": "technic",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "active",
+      "description": "не открывал",
+      "date": "6.9.2023"
+    },
+    {
+      "id": 17,
+      "title": "1",
+      "price": "1",
+      "category": "technic",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "archive",
+      "description": "1",
+      "date": "2.8.2023"
+    },
+    {
+      "id": 18,
+      "title": "лоток для кошек",
+      "price": "100",
+      "category": "animal",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "active",
+      "description": "новый, не использовался",
+      "date": "6.9.2023"
+    }
+  ]
 }

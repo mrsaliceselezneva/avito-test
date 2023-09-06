@@ -12,10 +12,10 @@ const Controller = (props) => {
 
     const onSubmit = (data) => {
         const date = new Date();
-        const utc =
-            date.getTimezoneOffset() / 60 <= 0
-                ? `+${date.getTimezoneOffset() / -60}UTC`
-                : `-${date.getTimezoneOffset()}UTC`;
+        // const utc =
+        //     date.getTimezoneOffset() / 60 <= 0
+        //         ? `+${date.getTimezoneOffset() / -60}UTC`
+        //         : `-${date.getTimezoneOffset()}UTC`;
 
         data.id = item.id;
         data.title = item.title;
@@ -24,7 +24,7 @@ const Controller = (props) => {
         data.email = item.email;
         data.status = "close";
         data.description = item.description;
-        data.date = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()} ${utc}`;
+        data.date = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
 
         sendRequest(`/items/${item.id}`, "put", data).then(() => {
             dispatch(setIsChange(!isChange));

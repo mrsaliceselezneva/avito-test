@@ -7,8 +7,6 @@ const Connector = (props) => {
 
     const img = `img/${item.category}.jpeg`;
 
-    const ifClose = item.status == "close";
-
     const onOpen = () => {
         setShowItem(true);
     };
@@ -17,16 +15,7 @@ const Connector = (props) => {
         setShowItem(false);
     };
 
-    return (
-        <View
-            item={item}
-            ifClose={ifClose}
-            showItem={showItem}
-            onOpen={onOpen}
-            onClose={onClose}
-            img={img}
-        />
-    );
+    return <View item={item} showItem={showItem} onOpen={onOpen} onClose={onClose} img={img} />;
 };
 
 export default Connector;
