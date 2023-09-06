@@ -24,7 +24,6 @@ const Controller = (props) => {
     const onCloseAddItem = () => setShowAddItem(false);
     const onOpenAddItem = () => setShowAddItem(true);
 
-
     const logOut = () => {
         setIsLogout(true);
         setShowAuthorization(true);

@@ -1,17 +1,9 @@
-import { sendRequest } from "api/utils";
 import Status from "components/Status";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
-    const { show, onClose } = props;
-    const [listMenu, setListMenu] = useState([]);
-
-    useEffect(() => {
-        sendRequest("/status", "get").then((data) => {
-            setListMenu(data);
-        });
-    }, []);
+    const { show, onClose, listMenu } = props;
 
     if (show) {
         return (

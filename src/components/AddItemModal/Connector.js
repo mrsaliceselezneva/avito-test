@@ -8,9 +8,10 @@ const Connector = (props) => {
     const [listCategory, setListCategory] = useState([]);
 
     const errorMessage = "Обязательное поле";
+    const errorMessageDate = "Некорректная дата";
     const errorColor = "#ff6e4a";
     const errorBackground = { background: errorColor };
-    const errorBorderColor = { borderColor: "#ff6e4a" };
+    const errorBorderColor = { borderColor: errorColor };
 
     useEffect(() => {
         sendRequest("/categories", "get").then((data) => {
@@ -23,6 +24,7 @@ const Connector = (props) => {
             onClose={onClose}
             listCategory={listCategory}
             errorMessage={errorMessage}
+            errorMessageDate={errorMessageDate}
             errorBackground={errorBackground}
             errorBorderColor={errorBorderColor}
         />

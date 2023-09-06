@@ -9,6 +9,7 @@ const Controller = (props) => {
     const dispatch = useDispatch();
 
     const changeCategory = () => {
+        console.log()
         if (isSelectCategory) {
             dispatch(setClearCategory());
         } else {

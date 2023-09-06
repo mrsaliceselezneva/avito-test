@@ -1,19 +1,10 @@
-import { sendRequest } from "api/utils";
 import Category from "components/Category";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FiX } from "react-icons/fi";
 import styles from "./styles.module.scss";
 
 const View = (props) => {
-    const { show, onClose } = props;
-
-    const [listCategory, setListCategory] = useState([]);
-
-    useEffect(() => {
-        sendRequest("/categories", "get").then((data) => {
-            setListCategory(data.map((category) => category.title));
-        });
-    }, []);
+    const { show, onClose, listCategory } = props;
 
     if (show) {
         return (
@@ -22,7 +13,7 @@ const View = (props) => {
                     <div className={styles.modal__content__sidebar}>
                         <FiX className={styles.modal__content__sidebar__exit} onClick={onClose} />
                         {listCategory.map((category) => (
-                            <Category key={category} category={category} />
+                            <Category key={category.title} category={category} />
                         ))}
                     </div>
                 </div>
