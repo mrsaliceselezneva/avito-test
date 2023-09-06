@@ -9,7 +9,7 @@ const Connector = (props) => {
 
     useEffect(() => {
         sendRequest("/categories", "get").then((data) => {
-            setListCategory(data.map((category) => category.title));
+            setListCategory(data);
         });
     }, []);
     return <View show={show} onClose={onClose} listCategory={listCategory} />;

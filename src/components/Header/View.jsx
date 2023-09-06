@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 
 const View = (props) => {
     const {
-        onCLoseAuthorizationModal,
+        onCloseAuthorizationModal,
         onOpenAuthorizationModal,
         onCloseMenu,
         onOpenMenu,
@@ -56,7 +56,7 @@ const View = (props) => {
                 <AuthorizationModal
                     show={showAuthorization}
                     isLogout={isLogout}
-                    onClose={onCLoseAuthorizationModal}
+                    onClose={onCloseAuthorizationModal}
                     setShowAuthorization={setShowAuthorization}
                     setIsLogout={setIsLogout}
                 />

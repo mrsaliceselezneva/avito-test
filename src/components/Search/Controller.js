@@ -17,9 +17,9 @@ const Controller = () => {
     function onChange(event) {
         dispatch(setSearch(event.target.value));
     }
-   
+
     const onClose = () => setShow(false);
-    const onOpen = () => setShow(false);
+    const onOpen = () => setShow(true);
     const clear = () => dispatch(setClearSearch());
     const ifWidth = useWindowSize() > 840;
 

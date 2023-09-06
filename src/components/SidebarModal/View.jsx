@@ -13,7 +13,7 @@ const View = (props) => {
                     <div className={styles.modal__content__sidebar}>
                         <FiX className={styles.modal__content__sidebar__exit} onClick={onClose} />
                         {listCategory.map((category) => (
-                            <Category key={category} category={category} />
+                            <Category key={category.title} category={category} />
                         ))}
                     </div>
                 </div>
