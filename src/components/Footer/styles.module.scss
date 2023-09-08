@@ -4,7 +4,7 @@ $footer-height: 80px;
 
 .footer {
     height: $footer-height;
-    background-color: rgba(76, 167, 248, 0.3);
+    background-color: $blue_color_transparency;
     box-shadow: 0 0 5px 2px $blue_color;
     display: flex;
     flex-direction: row;

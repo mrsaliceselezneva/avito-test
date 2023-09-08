@@ -54,16 +54,20 @@ const View = (props) => {
         );
     };
 
+    const classNameExit = isOwner
+        ? styles.modal__content__body__top__exit_owner
+        : styles.modal__content__body__top__exit;
+
     const menu =
         useWindowSize() <= 600 ? (
             <>
-                <FiX className={styles.modal__content__body__top__exit} onClick={onClose} />
+                <FiX className={classNameExit} onClick={onClose} />
                 {isOwner && closeOrBack()}
             </>
         ) : (
             <>
                 {isOwner && closeOrBack()}
-                <FiX className={styles.modal__content__body__top__exit} onClick={onClose} />
+                <FiX className={classNameExit} onClick={onClose} />
             </>
         );
     if (show) {
