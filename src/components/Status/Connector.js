@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { setIsFound } from "store/slices/foundSlice";
 import { setSelectStatus, setLinkStatus, setClearStatus } from "store/slices/menuSlice";
 import View from "./View.jsx";
 
@@ -13,6 +14,7 @@ const Connector = (props) => {
     const ifStatus = selectStatus === status.title;
 
     const onClick = () => {
+        dispatch(setIsFound(true));
         if (ifStatus) {
             dispatch(setClearStatus());
         } else {
