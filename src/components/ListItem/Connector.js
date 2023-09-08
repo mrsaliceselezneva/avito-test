@@ -1,6 +1,7 @@
 import { sendRequest } from "api/utils";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { setIsFound } from "store/slices/foundSlice";
 import {
     changeNumPages,
     changeShowPages,
@@ -28,7 +29,6 @@ const Connector = () => {
         sendRequest(`/items?${linkStatus}${linkSearch}${linkCategory}`, "get").then((data) => {
             const date = new Date();
             let n = data.length;
-            console.log(n);
             data.map((item) => {
                 const masDate = item.date.split(".");
                 if (item.status == "active") {
@@ -82,8 +82,9 @@ const Connector = () => {
         ).then((data) => {
             setListItem(data);
             setStyleGrid(gridRows(data.length));
+            data.length === 0 ? dispatch(setIsFound(false)) : dispatch(setIsFound(true));
         });
-    }, [linkCategory, linkStatus, linkSearch, isChange, selectPage]);
+    }, [linkCategory, linkStatus, linkSearch, isChange, selectPage, setIsFound]);
 
     return <View listItem={listItem} styleGrid={styleGrid} />;
 };

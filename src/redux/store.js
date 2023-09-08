@@ -12,6 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 
 import changeReducer from "./slices/changeSlice";
+import foundReducer from "./slices/foundSlice";
 import menuReducer from "./slices/menuSlice";
 import paginationReducer from "./slices/paginationSlice";
 import profileReducer from "./slices/profileSlice";
@@ -29,6 +30,7 @@ const profilePersistedReducer = persistReducer(persistConfig, profileReducer);
 const searchPersistedReducer = persistReducer(persistConfig, searchReducer);
 const sidebarPersistedReducer = persistReducer(persistConfig, sidebarReducer);
 const paginationPersistedReducer = persistReducer(persistConfig, paginationReducer);
+const foundPersistedReducer = persistReducer(persistConfig, foundReducer);
 
 export const store = configureStore({
     reducer: {
@@ -38,6 +40,7 @@ export const store = configureStore({
         searchReducer: searchPersistedReducer,
         sidebarReducer: sidebarPersistedReducer,
         paginationReducer: paginationPersistedReducer,
+        foundReducer: foundPersistedReducer,
     },
 
     middleware: (getDefaultMiddleware) =>

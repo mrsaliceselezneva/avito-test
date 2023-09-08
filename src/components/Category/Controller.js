@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { setIsFound } from "store/slices/foundSlice";
 import { setSelectCategory, setLinkCategory, setClearCategory } from "store/slices/sidebarSlice";
 import View from "./View.jsx";
 
@@ -9,7 +10,7 @@ const Controller = (props) => {
     const dispatch = useDispatch();
 
     const changeCategory = () => {
-        console.log()
+        dispatch(setIsFound(true));
         if (isSelectCategory) {
             dispatch(setClearCategory());
         } else {
