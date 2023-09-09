@@ -6,9 +6,9 @@ const View = (props) => {
 
     const className = ifStatus ? styles.status_select : styles.status;
     return (
-        <div className={className} onClick={onClick}>
+        <li className={className} onClick={onClick}>
             {status.title}
-        </div>
+        </li>
     );
 };
 

@@ -1,5 +1,11 @@
 @import "src/styles/utils";
 
+li {
+    list-style-type: none;
+    list-style: none;
+    display: inline-block;
+}
+
 .status {
     cursor: pointer;
     @include text(600, 18px, 18px, $black_color);

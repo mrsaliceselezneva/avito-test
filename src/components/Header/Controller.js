@@ -18,8 +18,7 @@ const Controller = (props) => {
         setShowAuthorization(true);
     };
 
-    const onCloseMenu = () => setShowMenu(false);
-    const onOpenMenu = () => setShowMenu(true);
+    const onClickMenu = () => setShowMenu(!showMenu);
 
     const onCloseAddItem = () => setShowAddItem(false);
     const onOpenAddItem = () => setShowAddItem(true);
@@ -33,8 +32,7 @@ const Controller = (props) => {
         <View
             onCloseAuthorizationModal={onCloseAuthorizationModal}
             onOpenAuthorizationModal={onOpenAuthorizationModal}
-            onCloseMenu={onCloseMenu}
-            onOpenMenu={onOpenMenu}
+            onClickMenu={onClickMenu}
             onCloseAddItem={onCloseAddItem}
             onOpenAddItem={onOpenAddItem}
             picture={picture}

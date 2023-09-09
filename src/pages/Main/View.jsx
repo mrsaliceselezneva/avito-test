@@ -11,7 +11,6 @@ import styles from "./styles.module.scss";
 
 const View = () => {
     const { isFound } = useSelector((state) => state.foundReducer);
-
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__main}>

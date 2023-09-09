@@ -84,7 +84,7 @@ const Connector = () => {
             setStyleGrid(gridRows(data.length));
             data.length === 0 ? dispatch(setIsFound(false)) : dispatch(setIsFound(true));
         });
-    }, [linkCategory, linkStatus, linkSearch, isChange, selectPage, setIsFound]);
+    }, [linkCategory, linkStatus, linkSearch, isChange, selectPage]);
 
     return <View listItem={listItem} styleGrid={styleGrid} />;
 };
