@@ -1,0 +1,95 @@
+@import url("http://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic");
+@import "src/styles/utils";
+
+$background: $white_color;
+$border: $blue_color_transparency;
+$select: $blue_color;
+$arrow: $red_color;
+
+@mixin text($w, $s, $l, $c) {
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: $w;
+    font-size: $s;
+    line-height: $l;
+    color: $c;
+}
+
+.wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__pagination {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 30px;
+        position: relative;
+        @include text(600, 17px, 16px, $select);
+
+        &__pages {
+            display: flex;
+            flex-direction: row;
+
+            &__block {
+                display: flex;
+                align-items: center;
+                height: 30px;
+                background-color: $background;
+                border-radius: 20px;
+                border: solid 2px $border;
+                margin-right: 0;
+                margin-left: auto;
+                padding-left: 5px;
+                padding-right: 5px;
+                @include text(600, 16px, 16px, $select);
+                cursor: pointer;
+            }
+
+            &__block:hover {
+                background-color: $border;
+            }
+
+            &__select_block {
+                display: flex;
+                align-items: center;
+                height: 30px;
+                background-color: $select;
+                border-radius: 20px;
+                border: solid 2px $border;
+                margin-right: 0;
+                margin-left: auto;
+                padding-left: 5px;
+                padding-right: 5px;
+                @include text(600, 16px, 16px, $background);
+                cursor: pointer;
+            }
+
+            &__select_block:hover {
+                background-color: $border;
+            }
+        }
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            background-color: $background;
+            border-radius: 20px;
+            border: solid 2px $border;
+            margin-right: 0;
+            margin-left: auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            @include text(600, 18px, 16px, $select);
+            cursor: pointer;
+        }
+        &__arrow:hover {
+            background-color: $arrow;
+            color: $background;
+        }
+    }
+}

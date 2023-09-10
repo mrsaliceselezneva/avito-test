@@ -39,7 +39,7 @@
                     flex-direction: column;
                 }
 
-                &__exit {
+                &__exit_owner {
                     background-color: $red_color;
                     border-radius: 100%;
                     padding: 2px;
@@ -52,6 +52,27 @@
                         margin-left: auto;
                         margin-right: 0;
                     }
+                }
+
+                &__exit_owner:hover {
+                    background-color: $blue_color_hover;
+                }
+
+                &__exit_owner:active {
+                    background-color: $blue_color_active;
+                }
+
+                &__exit {
+                    background-color: $red_color;
+                    border-radius: 100%;
+                    padding: 2px;
+                    height: 22px;
+                    width: 22px;
+                    color: $white_color;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    margin-left: auto;
+                    margin-right: 0;
                 }
 
                 &__exit:hover {

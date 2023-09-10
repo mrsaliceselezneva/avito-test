@@ -95,7 +95,7 @@
       "category": "dishes",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
-      "status": "active",
+      "status": "archive",
       "description": "очень хороший товар",
       "date": "6.9.2023"
     },
@@ -106,7 +106,7 @@
       "category": "dishes",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@yandex.ru",
-      "status": "active",
+      "status": "archive",
       "description": "очень хороший товар",
       "date": "1.9.2023"
     },
@@ -150,7 +150,7 @@
       "category": "clothes",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
-      "status": "active",
+      "status": "archive",
       "description": "очень хороший товар",
       "date": "6.8.2023"
     },
@@ -185,7 +185,7 @@
       "category": "technic",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
-      "status": "active",
+      "status": "archive",
       "description": "не открывал",
       "date": "6.9.2023"
     },
@@ -207,9 +207,189 @@
       "category": "animal",
       "user": "Артём Полувесов",
       "email": "poluvesov.artyom@gmail.com",
-      "status": "active",
+      "status": "archive",
       "description": "новый, не использовался",
       "date": "6.9.2023"
+    },
+    {
+      "id": 19,
+      "title": "лоток для кошек",
+      "price": "100",
+      "category": "animal",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "новый, не использовался",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 20,
+      "title": "лоток для кошек",
+      "price": "100",
+      "category": "animal",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "новый, не использовался",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 21,
+      "title": "лоток для кошек",
+      "price": "100",
+      "category": "animal",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "новый, не использовался",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 22,
+      "title": "носки",
+      "price": "1000",
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "шерстяные",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 23,
+      "title": "носки",
+      "price": "1000",
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "шерстяные",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 24,
+      "title": "шарф",
+      "price": "3000",
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "шерстяной",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 25,
+      "title": "шарф",
+      "price": "3000",
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "шерстяной",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 26,
+      "title": "шарф",
+      "price": "3000",
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "шерстяной",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 27,
+      "title": "чашка",
+      "price": "300",
+      "category": "dishes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "купил в Питере. Настоящий фарфор",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 28,
+      "title": "чашка",
+      "price": "300",
+      "category": "dishes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "купил в Питере. Настоящий фарфор",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 29,
+      "title": "чашка",
+      "price": "300",
+      "category": "dishes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "купил в Питере. Настоящий фарфор",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 30,
+      "title": "машинка",
+      "price": "10000",
+      "category": "toy",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "на пульте управления. Гоночная",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 31,
+      "title": "машинка",
+      "price": "10000",
+      "category": "toy",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "на пульте управления. Гоночная",
+      "date": "12.12.2023"
+    },
+    {
+      "id": 32,
+      "title": "машинка",
+      "price": "10000",
+      "category": "toy",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@yandex.ru",
+      "status": "active",
+      "description": "на пульте управления. Гоночная",
+      "date": "12.12.2023"
+    },
+    {
+      "price": "1500",
+      "street": "улица Карла Маркса",
+      "house": " 13Ак3",
+      "id": 33,
+      "title": "штаны",
+      "category": "clothes",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "close",
+      "description": "спортивные",
+      "date": "9.8.2023"
+    },
+    {
+      "price": "30000",
+      "street": "улица Радищева",
+      "house": " 1",
+      "id": 34,
+      "title": "тлефон",
+      "category": "technic",
+      "user": "Артём Полувесов",
+      "email": "poluvesov.artyom@gmail.com",
+      "status": "close",
+      "description": "google pixel",
+      "date": "9.8.2023"
     }
   ]
 }

@@ -1,7 +1,9 @@
+@import "src/styles/utils";
+
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(251, 251, 251);
+    background-color: $white_color;
     width: 100%;
     margin: 0;
 }

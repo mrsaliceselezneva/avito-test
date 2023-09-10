@@ -35,8 +35,7 @@ const Controller = (props) => {
                         data.date.split("-")[0]
                     }`,
                 };
-                console.log(sendData);
-                // sendRequest("/items", "post", sendData);
+                sendRequest("/items", "post", sendData);
                 dispatch(setIsChange(!isChange));
                 onClose();
             });

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import View from "./View.jsx";
 
 const Connector = (props) => {
-    const { show, onClose } = props;
+    const { show } = props;
 
     const [listMenu, setListMenu] = useState([]);
 
@@ -13,7 +13,7 @@ const Connector = (props) => {
         });
     }, []);
 
-    return <View show={show} onClose={onClose} listMenu={listMenu} />;
+    return <View show={show} listMenu={listMenu} />;
 };
 
 export default Connector;
