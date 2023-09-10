@@ -24,7 +24,7 @@ const Controller = (props) => {
         data.email = item.email;
         data.status = "close";
         data.description = item.description;
-        data.date = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+        data.date = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 
         sendRequest(`/items/${item.id}`, "put", data).then(() => {
             dispatch(setIsChange(!isChange));
