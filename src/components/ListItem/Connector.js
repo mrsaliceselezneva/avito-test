@@ -1,7 +1,6 @@
 import { sendRequest } from "api/utils";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setIsFound } from "store/slices/foundSlice";
 import {
     changeNumPages,
     changeShowPages,
@@ -16,6 +15,7 @@ import gridRows from "./helpers";
 const Connector = () => {
     const [listItem, setListItem] = useState([]);
     const [styleGrid, setStyleGrid] = useState(null);
+    const [isFound, setIsFound] = useState(false);
 
     const { linkCategory } = useSelector((state) => state.sidebarReducer);
     const { linkStatus } = useSelector((state) => state.menuReducer);
@@ -81,12 +81,12 @@ const Connector = () => {
             "get",
         ).then((data) => {
             setListItem(data);
-            setStyleGrid(gridRows(data.length));
-            data.length === 0 ? dispatch(setIsFound(false)) : dispatch(setIsFound(true));
+            setStyleGrid(gridRows(data.length, window.innerWidth));
+            data.length === 0 ? setIsFound(false) : setIsFound(true);
         });
     }, [linkCategory, linkStatus, linkSearch, isChange, selectPage]);
 
-    return <View listItem={listItem} styleGrid={styleGrid} />;
+    return <View listItem={listItem} styleGrid={styleGrid} isFound={isFound} />;
 };
 
 export default Connector;

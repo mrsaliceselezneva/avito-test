@@ -14,9 +14,13 @@ const Connector = (props) => {
     const errorBorderColor = { borderColor: errorColor };
 
     useEffect(() => {
-        sendRequest("/categories", "get").then((data) => {
-            setListCategory(data);
-        });
+        sendRequest("/categories", "get")
+            .then((data) => {
+                setListCategory(data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }, []);
     return (
         <Controller

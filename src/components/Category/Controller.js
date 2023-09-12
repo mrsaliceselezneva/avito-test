@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setIsFound } from "store/slices/foundSlice";
 import { setSelectCategory, setLinkCategory, setClearCategory } from "store/slices/sidebarSlice";
 import View from "./View.jsx";
 
@@ -9,13 +8,12 @@ const Controller = (props) => {
 
     const dispatch = useDispatch();
 
-    const changeCategory = () => {
-        dispatch(setIsFound(true));
+    const changeCategory = async () => {
         if (isSelectCategory) {
-            dispatch(setClearCategory());
+            await dispatch(setClearCategory());
         } else {
-            dispatch(setSelectCategory(category.title));
-            dispatch(setLinkCategory(`&category=${category.type}`));
+            await dispatch(setSelectCategory(category.title));
+            await dispatch(setLinkCategory(`&category=${category.type}`));
         }
     };
 

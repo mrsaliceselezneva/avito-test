@@ -166,19 +166,6 @@
       "date": "1.9.2023"
     },
     {
-      "price": "123456",
-      "street": "Дворцовая улица",
-      "house": " 7",
-      "id": 12,
-      "title": "носки",
-      "category": "clothes",
-      "user": "Артём Полувесов",
-      "email": "poluvesov.artyom@gmail.com",
-      "status": "archive",
-      "description": "очень хороший товар",
-      "date": "2.8.2023"
-    },
-    {
       "id": 13,
       "title": "телевизор",
       "price": "79000",

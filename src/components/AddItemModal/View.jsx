@@ -27,7 +27,9 @@ const View = (props) => {
     );
 
     const errorSpanDate = (
-        <span className={styles.modal__content__body__form__error}>{errorMessageDate}</span>
+        <span className={styles.modal__content__body__form__error} data-testid='error-data'>
+            {errorMessageDate}
+        </span>
     );
 
     if (show) {
@@ -124,6 +126,7 @@ const View = (props) => {
                             <input
                                 type='submit'
                                 className={styles.modal__content__body__form__submit}
+                                data-testid='submit'
                             />
                         </form>
                     </div>

@@ -7,7 +7,7 @@ const Controller = () => {
     const dispatch = useDispatch();
     const { searchRequest } = useSelector((state) => state.searchReducer);
 
-    const search = () => dispatch(setRequest(searchRequest));
+    const search = async () => await dispatch(setRequest(searchRequest));
 
     return <View search={search} />;
 };

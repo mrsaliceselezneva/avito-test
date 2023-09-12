@@ -10,7 +10,7 @@ const Controller = (props) => {
     const { isChange } = useSelector((state) => state.changeReducer);
     const dispatch = useDispatch();
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         const date = new Date();
         // const utc =
         //     date.getTimezoneOffset() / 60 <= 0
@@ -26,11 +26,9 @@ const Controller = (props) => {
         data.description = item.description;
         data.date = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 
-        sendRequest(`/items/${item.id}`, "put", data).then(() => {
+        await sendRequest(`/items/${item.id}`, "put", data).then(() => {
             dispatch(setIsChange(!isChange));
         });
-
-        console.log(data);
     };
 
     return (

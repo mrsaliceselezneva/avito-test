@@ -14,76 +14,76 @@ const Controller = () => {
         (state) => state.paginationReducer,
     );
 
-    const pageRight = (diff) => {
+    const pageRight = async (diff) => {
         if (selectPage === mediumPage) {
             if (lastPage + diff <= numPages) {
-                dispatch(changeFirstPage(firstPage + diff));
-                dispatch(changeLastPage(lastPage + diff));
-                dispatch(changeMediumPage(mediumPage + diff));
-                dispatch(changePage(selectPage + diff));
+                await dispatch(changeFirstPage(firstPage + diff));
+                await dispatch(changeLastPage(lastPage + diff));
+                await dispatch(changeMediumPage(mediumPage + diff));
+                await dispatch(changePage(selectPage + diff));
             } else if (selectPage + diff <= numPages) {
-                dispatch(changeFirstPage(firstPage + numPages - lastPage));
-                dispatch(changeLastPage(lastPage + numPages - lastPage));
-                dispatch(changeMediumPage(mediumPage + numPages - lastPage));
-                dispatch(changePage(selectPage + diff));
+                await dispatch(changeFirstPage(firstPage + numPages - lastPage));
+                await dispatch(changeLastPage(lastPage + numPages - lastPage));
+                await dispatch(changeMediumPage(mediumPage + numPages - lastPage));
+                await dispatch(changePage(selectPage + diff));
             }
         } else if (selectPage < mediumPage) {
             if (selectPage + diff > mediumPage) {
                 if (lastPage + diff - (mediumPage - selectPage) <= numPages) {
                     const v = diff - (mediumPage - selectPage);
-                    dispatch(changeFirstPage(firstPage + v));
-                    dispatch(changeLastPage(lastPage + v));
-                    dispatch(changeMediumPage(mediumPage + v));
-                    dispatch(changePage(selectPage + diff));
+                    await dispatch(changeFirstPage(firstPage + v));
+                    await dispatch(changeLastPage(lastPage + v));
+                    await dispatch(changeMediumPage(mediumPage + v));
+                    await dispatch(changePage(selectPage + diff));
                 } else {
-                    dispatch(changeFirstPage(firstPage + numPages - lastPage));
-                    dispatch(changeLastPage(lastPage + numPages - lastPage));
-                    dispatch(changeMediumPage(mediumPage + numPages - lastPage));
-                    dispatch(changePage(selectPage + diff));
+                    await dispatch(changeFirstPage(firstPage + numPages - lastPage));
+                    await dispatch(changeLastPage(lastPage + numPages - lastPage));
+                    await dispatch(changeMediumPage(mediumPage + numPages - lastPage));
+                    await dispatch(changePage(selectPage + diff));
                 }
             } else {
-                dispatch(changePage(selectPage + diff));
+                await dispatch(changePage(selectPage + diff));
             }
         } else if (selectPage > mediumPage) {
             if (selectPage + diff <= numPages) {
-                dispatch(changePage(selectPage + diff));
+                await dispatch(changePage(selectPage + diff));
             }
         }
     };
 
-    const pageLeft = (diff) => {
+    const pageLeft = async (diff) => {
         if (selectPage === mediumPage) {
             if (firstPage - diff >= 1) {
-                dispatch(changeFirstPage(firstPage - diff));
-                dispatch(changeLastPage(lastPage - diff));
-                dispatch(changeMediumPage(mediumPage - diff));
-                dispatch(changePage(selectPage - diff));
+                await dispatch(changeFirstPage(firstPage - diff));
+                await dispatch(changeLastPage(lastPage - diff));
+                await dispatch(changeMediumPage(mediumPage - diff));
+                await dispatch(changePage(selectPage - diff));
             } else if (selectPage - diff >= 1) {
-                dispatch(changeFirstPage(firstPage - 1 + firstPage));
-                dispatch(changeLastPage(lastPage - 1 + firstPage));
-                dispatch(changeMediumPage(mediumPage - 1 + firstPage));
-                dispatch(changePage(selectPage - diff));
+                await dispatch(changeFirstPage(firstPage - 1 + firstPage));
+                await dispatch(changeLastPage(lastPage - 1 + firstPage));
+                await dispatch(changeMediumPage(mediumPage - 1 + firstPage));
+                await dispatch(changePage(selectPage - diff));
             }
         } else if (selectPage > mediumPage) {
             if (selectPage - diff < mediumPage) {
                 if (firstPage - diff + (selectPage - mediumPage) >= 1) {
                     const v = -diff + (selectPage - mediumPage);
-                    dispatch(changeFirstPage(firstPage + v));
-                    dispatch(changeLastPage(lastPage + v));
-                    dispatch(changeMediumPage(mediumPage + v));
-                    dispatch(changePage(selectPage - diff));
+                    await dispatch(changeFirstPage(firstPage + v));
+                    await dispatch(changeLastPage(lastPage + v));
+                    await dispatch(changeMediumPage(mediumPage + v));
+                    await dispatch(changePage(selectPage - diff));
                 } else {
-                    dispatch(changeFirstPage(firstPage - 1 + firstPage));
-                    dispatch(changeLastPage(lastPage - 1 + firstPage));
-                    dispatch(changeMediumPage(mediumPage - 1 + firstPage));
-                    dispatch(changePage(selectPage - diff));
+                    await dispatch(changeFirstPage(firstPage - 1 + firstPage));
+                    await dispatch(changeLastPage(lastPage - 1 + firstPage));
+                    await dispatch(changeMediumPage(mediumPage - 1 + firstPage));
+                    await dispatch(changePage(selectPage - diff));
                 }
             } else {
-                dispatch(changePage(selectPage - diff));
+                await dispatch(changePage(selectPage - diff));
             }
         } else if (selectPage < mediumPage) {
             if (selectPage - diff >= 1) {
-                dispatch(changePage(selectPage - diff));
+                await dispatch(changePage(selectPage - diff));
             }
         }
     };
@@ -96,18 +96,18 @@ const Controller = () => {
         }
     };
 
-    const allLeft = () => {
-        dispatch(changeFirstPage(1));
-        dispatch(changeLastPage(showPages));
-        dispatch(changeMediumPage(Math.ceil(showPages / 2)));
-        dispatch(changePage(1));
+    const allLeft = async () => {
+        await dispatch(changeFirstPage(1));
+        await dispatch(changeLastPage(showPages));
+        await dispatch(changeMediumPage(Math.ceil(showPages / 2)));
+        await dispatch(changePage(1));
     };
 
-    const allRight = () => {
-        dispatch(changeFirstPage(numPages - showPages + 1));
-        dispatch(changeLastPage(numPages));
-        dispatch(changeMediumPage(numPages - Math.floor(showPages / 2)));
-        dispatch(changePage(numPages));
+    const allRight = async () => {
+        await dispatch(changeFirstPage(numPages - showPages + 1));
+        await dispatch(changeLastPage(numPages));
+        await dispatch(changeMediumPage(numPages - Math.floor(showPages / 2)));
+        await dispatch(changePage(numPages));
     };
 
     const oneLeft = () => pageLeft(1);

@@ -72,7 +72,7 @@ const View = (props) => {
         );
     if (show) {
         return (
-            <div className={styles.modal} onClick={onClose}>
+            <div className={styles.modal} onClick={onClose} data-testid='item-modal'>
                 <div className={styles.modal__content} onClick={(event) => event.stopPropagation()}>
                     <div className={styles.modal__content__body}>
                         <div className={styles.modal__content__body__top}>{menu}</div>

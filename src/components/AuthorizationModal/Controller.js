@@ -13,14 +13,14 @@ const Controller = (props) => {
         onError: (error) => console.log("Login Failed:", error),
     });
 
-    const logOut = () => {
+    const logOut = async () => {
         googleLogout();
-        dispatch(setDeleteProfile());
-        dispatch(setClearCategory());
-        dispatch(setClearStatus());
-        onClose();
-        setIsLogout(false);
-        setUser([]);
+        await dispatch(setDeleteProfile());
+        await dispatch(setClearCategory());
+        await dispatch(setClearStatus());
+        await onClose();
+        await setIsLogout(false);
+        await setUser([]);
     };
 
     const logIn = () => {

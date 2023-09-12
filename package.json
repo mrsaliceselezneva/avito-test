@@ -7,7 +7,7 @@
         "start": "webpack-dev-server --open",
         "prepare": "husky install",
         "lint-staged": "lint-staged",
-        "test": "jest"
+        "test": "jest --env=jsdom"
     },
     "repository": {
         "type": "git",
@@ -24,6 +24,7 @@
         "@babel/core": "^7.22.5",
         "@babel/preset-env": "^7.22.5",
         "@babel/preset-react": "^7.22.15",
+        "@testing-library/jest-dom": "^6.1.3",
         "@testing-library/react": "^14.0.0",
         "@testing-library/user-event": "^14.4.3",
         "babel-loader": "^9.1.2",
@@ -70,6 +71,7 @@
         "react-redux": "^8.1.2",
         "react-router": "^6.14.2",
         "react-router-dom": "^6.14.2",
+        "react-tooltip": "^5.21.3",
         "redux-persist": "^6.0.0"
     }
 }

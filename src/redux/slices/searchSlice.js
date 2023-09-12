@@ -18,9 +18,12 @@ const searchSlice = createSlice({
         setClearSearch(state) {
             state.searchRequest = "";
         },
+        setClearRequest(state) {
+            state.linkSearch = "";
+        },
     },
 });
 
-export const { setSearch, setRequest, setClearSearch } = searchSlice.actions;
+export const { setSearch, setRequest, setClearSearch, setClearRequest } = searchSlice.actions;
 
 export default searchSlice.reducer;

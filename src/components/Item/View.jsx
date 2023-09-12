@@ -6,7 +6,7 @@ const View = (props) => {
     const { item, showItem, onOpen, onClose, img } = props;
 
     return (
-        <div className={styles.wrapper} onClick={onOpen}>
+        <div className={styles.wrapper} onClick={onOpen} data-testid='item'>
             <img className={styles.wrapper__img} src={img} alt={item.title} />
             <div className={styles.wrapper__title}>{item.title}</div>
             <div className={styles.wrapper__close}>

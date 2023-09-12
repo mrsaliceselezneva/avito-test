@@ -30,7 +30,7 @@ const Connector = (props) => {
                 })
                 .catch((error) => console.log(error));
         }
-    }, [dispatch, profile, user]);
+    }, [profile, user]);
 
     return (
         <Controller

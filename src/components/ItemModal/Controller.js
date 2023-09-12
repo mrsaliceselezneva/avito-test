@@ -26,8 +26,10 @@ const Controller = (props) => {
         setDeleteItem(false);
     };
 
-    const onDelete = () => {
-        sendRequest(`/items/${item.id}`, "delete").then(() => dispatch(setIsChange(!isChange)));
+    const onDelete = async () => {
+        await sendRequest(`/items/${item.id}`, "delete").then(() =>
+            dispatch(setIsChange(!isChange)),
+        );
     };
 
     const isStatusActive = item.status == "active";
