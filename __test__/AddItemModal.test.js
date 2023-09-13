@@ -10,7 +10,6 @@ import "../__mocks__/requestMock.js";
 jest.mock("react-redux");
 
 const mockedSelector = jest.spyOn(reduxHooks, "useSelector");
-// const mockedDispatch = jest.spyOn(reduxHooks, "useDispatch");
 
 const profile = {
     name: "Артём Полувесов",
